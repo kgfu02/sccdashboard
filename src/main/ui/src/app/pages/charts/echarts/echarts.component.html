@@ -1,0 +1,105 @@
+<!--
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Pie</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-pie></ngx-echarts-pie>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Bar</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-bar></ngx-echarts-bar>
+      </nb-card-body>
+    </nb-card>
+  </div> -->
+<div class="row">
+  <div class="col-md-8">
+    <!--<button (click) = "selectAll();">Select All</button> <button (click) = "unselectAll();">Unselect All</button>-->
+    <nb-card>
+      <nb-card-header>Cumulative Cases by City
+        <nb-card-body>
+          <button nbButton [size]="this.sizing" (click)="selectAll();">
+            Select All
+          </button>
+        </nb-card-body>
+        <nb-card-body>
+          <button nbButton [size]="this.sizing" (click)="unselectAll();">
+            Unselect All
+          </button>
+        </nb-card-body>
+      </nb-card-header>
+      <!--style="border:red;height: 750px"-->
+      <nb-card-body>
+        <ngx-echarts-line></ngx-echarts-line>
+      </nb-card-body>
+    </nb-card>
+    <nb-card>
+      <nb-card-body>
+        <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. Data where cumulative cases decrease are likely due to misreportings by Santa Clara County.</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-4" *ngIf="todaycounts">
+    <nb-card style="width:400px; border:red;height: 700px">
+      <nb-card-header>Today's Numbers</nb-card-header>
+      <nb-card-body>
+        <div>
+          <table>
+            <tr>
+              <th>City</th>
+              <th>Total Cases</th>
+              <th>Change</th>
+            </tr>
+            <tr *ngFor="let num of numbers">
+              <td>{{names[num]}}</td>
+              <td>{{todaycounts[num]}}</td>
+              <td>{{todaychange[num]}}</td>
+            </tr>
+          </table>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+
+
+
+<!--
+<div class="col-lg-6">
+  <nb-card>
+    <nb-card-header>Multiple x-axis</nb-card-header>
+    <nb-card-body>
+      <ngx-echarts-multiple-xaxis></ngx-echarts-multiple-xaxis>
+    </nb-card-body>
+  </nb-card>
+</div>
+<div class="col-lg-6">
+  <nb-card>
+    <nb-card-header>Area Stack</nb-card-header>
+    <nb-card-body>
+      <ngx-echarts-area-stack></ngx-echarts-area-stack>
+    </nb-card-body>
+  </nb-card>
+</div>
+<div class="col-lg-6">
+  <nb-card>
+    <nb-card-header>Bar Animation</nb-card-header>
+    <nb-card-body>
+      <ngx-echarts-bar-animation></ngx-echarts-bar-animation>
+    </nb-card-body>
+  </nb-card>
+</div>
+<div class="col-lg-6">
+  <nb-card>
+    <nb-card-header>Radar</nb-card-header>
+    <nb-card-body>
+      <ngx-echarts-radar></ngx-echarts-radar>
+    </nb-card-body>
+  </nb-card>
+</div>
+
+-->
