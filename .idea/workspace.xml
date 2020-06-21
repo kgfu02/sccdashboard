@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7ccf91f-14ff-4ea9-9d3a-146da940fabb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dHSrM9MQcJUPTHNmvFTNxyeudE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="C:\Users\Kevin\Desktop\covid-dashboard-spring\src\main\ui\node_modules\typescript\lib" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CovidDashboardSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="covid-dashboard-spring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kfu.coviddashboard.coviddashboardspring.CovidDashboardSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7ccf91f-14ff-4ea9-9d3a-146da940fabb" name="Default Changelist" comment="" />
+      <created>1592080722477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592080722477</updated>
+      <workItem from="1592080726213" duration="27524000" />
+      <workItem from="1592247712223" duration="1214000" />
+      <workItem from="1592289125516" duration="1059000" />
+      <workItem from="1592332885109" duration="1843000" />
+      <workItem from="1592356075308" duration="3322000" />
+      <workItem from="1592373839875" duration="1287000" />
+      <workItem from="1592435758712" duration="4180000" />
+      <workItem from="1592443063951" duration="260000" />
+      <workItem from="1592449207606" duration="631000" />
+      <workItem from="1592450986680" duration="257000" />
+      <workItem from="1592462658700" duration="302000" />
+      <workItem from="1592550567529" duration="203000" />
+      <workItem from="1592550897027" duration="392000" />
+      <workItem from="1592551421886" duration="1104000" />
+      <workItem from="1592552613828" duration="621000" />
+      <workItem from="1592553258027" duration="725000" />
+      <workItem from="1592599149822" duration="725000" />
+      <workItem from="1592609746483" duration="2690000" />
+      <workItem from="1592613348089" duration="1117000" />
+      <workItem from="1592622415545" duration="1240000" />
+      <workItem from="1592680356301" duration="134000" />
+      <workItem from="1592680501502" duration="8000" />
+      <workItem from="1592691897366" duration="14000" />
+      <workItem from="1592691918889" duration="5099000" />
+      <workItem from="1592717874021" duration="1574000" />
+      <workItem from="1592724657269" duration="1127000" />
+      <workItem from="1592767705931" duration="805000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="527" y="363" key="#Assign_Data_Sources" timestamp="1592080971002">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="527" y="363" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1592080971002" />
+    <state x="381" y="242" key="FileChooserDialogImpl" timestamp="1592680488686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="381" y="242" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592680488686" />
+    <state width="1876" height="325" key="GridCell.Tab.0.bottom" timestamp="1592697309612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309612" />
+    <state width="1876" height="325" key="GridCell.Tab.0.center" timestamp="1592697309611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309611" />
+    <state width="1876" height="325" key="GridCell.Tab.0.left" timestamp="1592697309611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309611" />
+    <state width="1876" height="325" key="GridCell.Tab.0.right" timestamp="1592697309611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309611" />
+    <state width="1876" height="325" key="GridCell.Tab.1.bottom" timestamp="1592697309612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309612" />
+    <state width="1876" height="325" key="GridCell.Tab.1.center" timestamp="1592697309612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309612" />
+    <state width="1876" height="325" key="GridCell.Tab.1.left" timestamp="1592697309612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309612" />
+    <state width="1876" height="325" key="GridCell.Tab.1.right" timestamp="1592697309612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="325" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592697309612" />
+    <state x="970" y="173" key="Maven.ArtifactSearchDialog" timestamp="1592081497629">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="970" y="173" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592081497629" />
+    <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592614457584">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592614457584" />
+    <state x="184" y="129" key="new project wizard" timestamp="1592080779986">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1592080779986" />
+    <state x="1036" y="235" key="run.anything.popup" timestamp="1592365658181">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1036" y="235" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592365658181" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/DayController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
