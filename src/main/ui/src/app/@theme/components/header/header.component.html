@@ -11,6 +11,10 @@
 </div>
 
 <div class="header-container">
+  <div class="update">
+    <span [ngClass]="{'color-green': this.currentday==this.updateday, 'color-red': this.currentday!=this.updateday}">Last Updated: {{updateday}}</span>
+    Current Date: {{this.currentday}}
+  </div>
   <!--<nb-actions size="small">
 
     <nb-action class="control-item">

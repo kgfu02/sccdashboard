@@ -5,6 +5,8 @@ import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import {CasesService} from "../../../cases.service";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'ngx-header',
@@ -16,6 +18,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private destroy$: Subject<void> = new Subject<void>();
   userPictureOnly: boolean = false;
   user: any;
+  updateday: String;
+  currentday: String;
 
   themes = [
     {
@@ -45,7 +49,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private themeService: NbThemeService,
               private userService: UserData,
               private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService) {
+              private breakpointService: NbMediaBreakpointsService,
+              private casesservice: CasesService,
+              private datePipe: DatePipe) {
   }
 
   ngOnInit() {
@@ -69,6 +75,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe(themeName => this.currentTheme = themeName);
+
+    this.currentday = this.datePipe.transform(new Date, "yyyy/MM/dd");
+    this.casesservice.getTimestamps().subscribe(data => this.updateday = data[data.length-1]);
   }
 
   ngOnDestroy() {
