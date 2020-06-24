@@ -11,6 +11,9 @@
     display: flex;
     align-items: center;
     width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
+    @media(max-width: 1000px) {
+      width:auto;
+    }
   }
 
   nb-action {
@@ -61,6 +64,10 @@
       @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
       white-space: nowrap;
       text-decoration: none;
+      @media (max-width: 1000px) {
+        font-size: 1rem;
+        white-space: normal;
+      }
     }
   }
 

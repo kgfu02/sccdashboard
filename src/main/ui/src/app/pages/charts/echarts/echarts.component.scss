@@ -30,3 +30,12 @@ table, th, td {
 nb-card .box{
   height: 1000px;
 }
+
+.caseTable{
+  width: 400px;
+  border: #0b2e13;
+  height: 700px;
+  @media (max-width:1000px){
+    width: auto;
+  }
+}

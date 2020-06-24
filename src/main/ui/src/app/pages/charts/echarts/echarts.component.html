@@ -30,6 +30,7 @@
             Unselect All
           </button>
         </nb-card-body>
+        <span style="font-size: small">click the city names to select/unselect</span>
       </nb-card-header>
       <!--style="border:red;height: 750px"-->
       <nb-card-body>
@@ -43,25 +44,27 @@
     </nb-card>
   </div>
   <div class="col-md-4" *ngIf="todaycounts">
-    <nb-card style="width:400px; border:red;height: 700px">
-      <nb-card-header>Today's Numbers</nb-card-header>
-      <nb-card-body>
-        <div>
-          <table>
-            <tr>
-              <th>City</th>
-              <th>Total Cases</th>
-              <th>Change</th>
-            </tr>
-            <tr *ngFor="let num of numbers">
-              <td>{{names[num]}}</td>
-              <td>{{todaycounts[num]}}</td>
-              <td>{{todaychange[num]}}</td>
-            </tr>
-          </table>
-        </div>
-      </nb-card-body>
-    </nb-card>
+    <div class="caseTable">
+      <nb-card>
+        <nb-card-header>Today's Numbers</nb-card-header>
+        <nb-card-body>
+          <div>
+            <table>
+              <tr>
+                <th>City</th>
+                <th>Total Cases</th>
+                <th>Change</th>
+              </tr>
+              <tr *ngFor="let num of numbers">
+                <td>{{names[num]}}</td>
+                <td>{{todaycounts[num]}}</td>
+                <td>{{todaychange[num]}}</td>
+              </tr>
+            </table>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
   </div>
 </div>
 
