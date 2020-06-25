@@ -12,6 +12,7 @@ import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {
+  NbCardModule,
   NbChatModule,
   NbDatepickerModule,
   NbDialogModule,
@@ -20,9 +21,10 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AboutComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -39,6 +41,7 @@ import {
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    NbCardModule,
   ],
   bootstrap: [AppComponent],
 })

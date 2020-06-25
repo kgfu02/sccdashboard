@@ -3,7 +3,8 @@
     <!--<a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
       <nb-icon icon="menu-2-outline"></nb-icon>
     </a>-->
-    <a class="logo" href="#" (click)="navigateHome()">Santa Clara County City-Level Coronavirus Dashboard</a> <!-- changes title -->
+    <a class="logo" routerLink="/">Santa Clara County City-Level Coronavirus Dashboard</a> <!-- changes title -->
+    <nav style="box-shadow: none"><a routerLink="/about">About</a></nav>
   </div>
   <!--<nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
     <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
@@ -12,7 +13,7 @@
 
 <div class="header-container">
   <div class="update">
-    <span [ngClass]="{'color-green': this.currentday==this.updateday, 'color-red': this.currentday!=this.updateday}">Last Updated: {{updateday}}</span>
+    <span style="font-size: 12px" [ngClass]="{'color-green': this.currentday==this.updateday, 'color-red': this.currentday!=this.updateday}">Last Updated: {{updateday}}</span>
   </div>
   <!--<nb-actions size="small">
 
