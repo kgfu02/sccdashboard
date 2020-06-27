@@ -19,8 +19,9 @@
   <div class="col-md-8">
     <!--<button (click) = "selectAll();">Select All</button> <button (click) = "unselectAll();">Unselect All</button>-->
     <nb-card>
+
       <nb-card-header>Cumulative Cases by City
-        <nb-card-body>
+        <nb-card-body class = "chart">
           <button nbButton [size]="this.sizing" (click)="selectAll();">
             Select All
           </button>
@@ -33,8 +34,8 @@
         <span style="font-size: small">click the city names to select/unselect</span>
       </nb-card-header>
       <!--style="border:red;height: 750px"-->
-      <nb-card-body>
-        <ngx-echarts-line></ngx-echarts-line>
+      <nb-card-body style="padding: 16px 14px">
+        <ngx-echarts-line style = {{this.chartHeight}}></ngx-echarts-line>
       </nb-card-body>
     </nb-card>
     <nb-card>

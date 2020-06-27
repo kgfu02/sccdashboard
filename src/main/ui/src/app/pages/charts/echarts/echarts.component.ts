@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { CasesService} from "../../../cases.service";
 import { NbComponentShape, NbComponentSize, NbComponentStatus } from '@nebular/theme';
+import { HostListener } from "@angular/core";
 
 @Component({
   selector: 'ngx-echarts',
@@ -17,10 +18,27 @@ export class EchartsComponent implements AfterViewInit{
   todaycounts = new Array();
   todaychange = new Array();
   numbers: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  screenHeight: number;
+  screenWidth: number;
+  chartHeight: string;
   constructor(private casesService: CasesService) {
+    this.getScreenSize();
+  }
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
+    console.log(this.screenHeight, this.screenWidth);
+    if (this.screenWidth < 600) {
+      this.chartHeight = 'height: 500px';
+    }
+    else if (this.screenHeight<600) {
+      this.chartHeight = 'height: 375px';
+    }
   }
 
   ngAfterViewInit() {
+
     console.log("hello");
     this.casesService.getCityCases().subscribe(data => {
       for (let i = 0; i < 13; i++) {

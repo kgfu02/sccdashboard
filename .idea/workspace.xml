@@ -21,34 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a7ccf91f-14ff-4ea9-9d3a-146da940fabb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/10-es2015.6d4c0c1b94112affd9b7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/10-es5.6d4c0c1b94112affd9b7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/11-es2015.2780e265d6084a9631cc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/11-es5.2780e265d6084a9631cc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/12-es2015.5f1d59bb2a5a6b3b811a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/12-es5.5f1d59bb2a5a6b3b811a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/13-es2015.ac4c613e2939a96996e5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/13-es5.ac4c613e2939a96996e5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/14-es2015.c87c0d20116076c82d85.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/14-es5.c87c0d20116076c82d85.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/3rdpartylicenses.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/7-es2015.525caa2bbbb467d83cfc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/7-es5.525caa2bbbb467d83cfc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/8-es2015.9783ed2c73105e4cb398.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/8-es5.9783ed2c73105e4cb398.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/8.6333e9cb9b7666e45a5c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/polyfills-es2015.d7514ae9f222fb5abcc8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/polyfills-es5.bf926099244b15001b0e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/@theme/components/footer/footer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/@theme/components/footer/footer.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/@theme/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/@theme/components/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/@theme/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/@theme/components/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/@theme/theme.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/@theme/theme.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/@theme/layouts/one-column/one-column.layout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/@theme/layouts/one-column/one-column.layout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts-line.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts-line.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/pages-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/pages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/pages.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/pages.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +134,8 @@
       <workItem from="1593035104600" duration="21000" />
       <workItem from="1593035480352" duration="396000" />
       <workItem from="1593036929335" duration="10945000" />
+      <workItem from="1593130888290" duration="5043000" />
+      <workItem from="1593195814256" duration="13839000" />
     </task>
     <servers />
   </component>
@@ -215,10 +199,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="970" y="173" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592081497629" />
+    <state x="757" y="261" key="RollbackChangesDialog" timestamp="1593071088767">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="757" y="261" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593071088767" />
     <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592614457584">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592614457584" />
+    <state x="118" y="280" width="841" height="560" key="find.popup" timestamp="1593210163548">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="118" y="280" width="841" height="560" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593210163548" />
     <state x="184" y="129" key="new project wizard" timestamp="1592080779986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -227,6 +219,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1036" y="235" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592365658181" />
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1593197340320">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593197340320" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

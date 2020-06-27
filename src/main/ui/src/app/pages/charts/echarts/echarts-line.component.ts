@@ -4,6 +4,7 @@ import {CasesService} from '../../../cases.service';
 import {Observable} from 'rxjs';
 import {Day} from '../../../day';
 import { NbComponentShape, NbComponentSize, NbComponentStatus } from '@nebular/theme';
+import { HostListener } from "@angular/core";
 
 @Component({
   selector: 'ngx-echarts-line',
@@ -20,8 +21,19 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
   names: String[] = ['Campbell', 'Cupertino', 'Gilroy', 'Los Altos', 'Los Gatos',
     'Milpitas', 'Morgan Hill', 'Mountain View',
     'Palo Alto', 'San Jose', 'Santa Clara', 'Saratoga', 'Sunnyvale'];
+  screenHeight: number;
+  screenWidth: number;
+  gridTop: string = '17%';
 
   constructor(private theme: NbThemeService, private casesService: CasesService) {
+    this.getScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
+    console.log(this.screenHeight, this.screenWidth);
   }
 
   onChartInit(e: any) {
@@ -47,6 +59,9 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
       this.casesService.getTimestamps().subscribe(response => {
         this.casesService.getCityCases().subscribe(cases => {
           console.log(cases[0]);
+          if (this.screenWidth < 1000) {
+            this.gridTop = '28%';
+          }
         this.options = {
           backgroundColor: echarts.bg,
           color: ['#2993DA', '#8dced4', '#5d2e2c', '#9a0e35',
@@ -64,13 +79,21 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
               'Palo Alto', 'San Jose', 'Santa Clara', 'Saratoga', 'Sunnyvale'],
             textStyle: {
               color: echarts.textColor,
+              fontSize: 12.5,
             },
+            padding: 0,
+            itemGap: 13,
+            itemWidth:28,
+            itemHeight: 14,
+            icon: 'circle',
           },
           dataZoom: {
             type: 'slider',
             textStyle: {
               color: '#FFFFFF',
             },
+            handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+            handleSize: '100%',
           },
           xAxis: [
             {
@@ -114,6 +137,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
             },
           ],
           grid: {
+            top: this.gridTop,
             left: '3%',
             right: '4%',
             bottom: '10%',
