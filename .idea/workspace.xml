@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7ccf91f-14ff-4ea9-9d3a-146da940fabb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/about/about.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/about/about.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts-line.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts-line.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/tslint.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +61,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Past Projects/angular-tour-of-heroes" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\node_modules\stylelint" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
     <property name="ts.external.directory.path" value="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -132,7 +141,8 @@
       <workItem from="1593195814256" duration="14339000" />
       <workItem from="1593389436868" duration="599000" />
       <workItem from="1593416805391" duration="1923000" />
-      <workItem from="1593478085054" duration="695000" />
+      <workItem from="1593478085054" duration="6335000" />
+      <workItem from="1593572144825" duration="16211000" />
     </task>
     <servers />
   </component>
@@ -156,10 +166,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="527" y="363" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1592080971002" />
-    <state x="381" y="242" key="FileChooserDialogImpl" timestamp="1593035124394">
+    <state x="100" y="100" width="1731" height="840" key="DiffContextDialog" timestamp="1593591132826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="381" y="242" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593035124394" />
+    <state x="100" y="100" width="1731" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593591132826" />
+    <state x="765" y="289" key="FileChooserDialogImpl" timestamp="1593487111748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="289" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593487111748" />
     <state width="1256" height="318" key="GridCell.Tab.0.bottom" timestamp="1592794643563">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -200,10 +214,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="261" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593071088767" />
-    <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592614457584">
+    <state x="182" y="289" width="999" height="739" key="SettingsEditor" timestamp="1593579687969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592614457584" />
+    <state x="182" y="289" width="999" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593579687969" />
+    <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1593591132826">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593591132826" />
     <state x="118" y="280" width="841" height="560" key="find.popup" timestamp="1593210163548">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

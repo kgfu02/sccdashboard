@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { CasesService} from "../../../cases.service";
 import { NbComponentShape, NbComponentSize, NbComponentStatus } from '@nebular/theme';
 import { HostListener } from "@angular/core";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'ngx-echarts',
@@ -21,6 +22,8 @@ export class EchartsComponent implements AfterViewInit{
   screenHeight: number;
   screenWidth: number;
   chartHeight: string;
+  raw: boolean = false;
+
   constructor(private casesService: CasesService) {
     this.getScreenSize();
   }
@@ -58,5 +61,15 @@ export class EchartsComponent implements AfterViewInit{
   }
   unselectAll(): void {
     this.casesService.unselAll();
+  }
+
+  parentSubject: Subject<any> = new Subject();
+  ToggleRawOn() {
+    this.raw = false;
+    this.parentSubject.next('RawOn');
+  }
+  ToggleRawOff() {
+    this.raw = true;
+    this.parentSubject.next('RawOff');
   }
 }

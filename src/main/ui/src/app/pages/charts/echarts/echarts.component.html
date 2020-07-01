@@ -18,8 +18,13 @@
 <div class="row">
   <div class="col-md-8">
     <!--<button (click) = "selectAll();">Select All</button> <button (click) = "unselectAll();">Unselect All</button>-->
-    <nb-card>
 
+    <div style="padding:0px 10px 10px 10px">
+      <button class ='left' (click)="ToggleRawOn()" [ngClass]="{'active': this.raw==false, 'inactive': this.raw==true}">Total Cases</button>
+      <button class ='right' (click)="ToggleRawOff()" [ngClass]="{'active': this.raw==true, 'inactive': this.raw==false}">Per 100,000</button>
+    </div>
+
+    <nb-card>
       <nb-card-header>Cumulative Cases by City
         <nb-card-body class = "chart">
           <button nbButton [size]="this.sizing" (click)="selectAll();">
@@ -35,12 +40,14 @@
       </nb-card-header>
       <!--style="border:red;height: 750px"-->
       <nb-card-body style="padding: 16px 14px">
-        <ngx-echarts-line style = {{this.chartHeight}}></ngx-echarts-line>
+        <ngx-echarts-line style = {{this.chartHeight}} [parentSubject]="parentSubject"></ngx-echarts-line>
       </nb-card-body>
     </nb-card>
+
     <nb-card>
       <nb-card-body>
         <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. Data where cumulative cases decrease are likely due to reclassification of cases.</p>
+        <p>For your reference, as of 7/1 the US has 787.5 cases per 100k, California has 588, and SCC has 226.7.</p>
       </nb-card-body>
     </nb-card>
   </div>
