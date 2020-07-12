@@ -1,12 +1,21 @@
 package kfu.coviddashboard.coviddashboardspring.repository;
 import kfu.coviddashboard.coviddashboardspring.model.Day;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 
+import javax.transaction.Transactional;
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface DayRepository extends JpaRepository<Day,Integer> {
-    @Query(value = "select * from dashboard where city = ?1", nativeQuery = true)
+    @Query(value = "select * from dashboardtable where city = ?1", nativeQuery = true)
     List<Day> findDayByCity(String city);
+
+    @Transactional
+    @Modifying
+    @Query(value = "insert into dashboardtable (city, count, timestamp) values (:city,:count,:time)", nativeQuery = true)
+    void postData(@Param("city") String city,@Param("count") Integer count,@Param("time") String time);
 }

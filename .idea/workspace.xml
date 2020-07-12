@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7ccf91f-14ff-4ea9-9d3a-146da940fabb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/covid-dashboard-spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/covid-dashboard-spring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/repository/DayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/repository/DayRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/angular.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +40,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1dHSrM9MQcJUPTHNmvFTNxyeudE" />
   <component name="ProjectViewState">
@@ -60,10 +71,10 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.stylelint" value="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\node_modules\stylelint" />
+    <property name="node.js.selected.package.stylelint" value="C:/Users/Kevin/Desktop/sccdashboard/src/main/ui/node_modules/stylelint" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
-    <property name="ts.external.directory.path" value="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/src/main/ui/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -134,6 +145,12 @@
       <workItem from="1593416805391" duration="1923000" />
       <workItem from="1593478085054" duration="6335000" />
       <workItem from="1593572144825" duration="16211000" />
+      <workItem from="1594176855883" duration="618000" />
+      <workItem from="1594333297987" duration="10000" />
+      <workItem from="1594337342473" duration="4895000" />
+      <workItem from="1594429644686" duration="11430000" />
+      <workItem from="1594514321663" duration="24000" />
+      <workItem from="1594514611194" duration="3139000" />
     </task>
     <servers />
   </component>
@@ -157,6 +174,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="527" y="363" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1592080971002" />
+    <state width="402" height="466" key="DebuggerActiveHint" timestamp="1594499347918">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="402" height="466" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1594499347918" />
     <state x="100" y="100" width="1731" height="840" key="DiffContextDialog" timestamp="1593591132826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -165,50 +186,92 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="289" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593487111748" />
-    <state width="1256" height="318" key="GridCell.Tab.0.bottom" timestamp="1592794643563">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.0.bottom" timestamp="1594517490220">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643563" />
-    <state width="1256" height="318" key="GridCell.Tab.0.center" timestamp="1592794643562">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001668" />
+    <state width="1358" height="537" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303900" />
+    <state width="1358" height="329" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594517490220" />
+    <state width="1358" height="329" key="GridCell.Tab.0.center" timestamp="1594517490219">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643562" />
-    <state width="1256" height="318" key="GridCell.Tab.0.left" timestamp="1592794643562">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001668" />
+    <state width="1358" height="537" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303899" />
+    <state width="1358" height="329" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594517490219" />
+    <state width="1358" height="329" key="GridCell.Tab.0.left" timestamp="1594517490218">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643562" />
-    <state width="1256" height="318" key="GridCell.Tab.0.right" timestamp="1592794643562">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001667" />
+    <state width="1358" height="537" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303899" />
+    <state width="1358" height="329" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594517490218" />
+    <state width="1358" height="329" key="GridCell.Tab.0.right" timestamp="1594517490219">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643562" />
-    <state width="1256" height="318" key="GridCell.Tab.1.bottom" timestamp="1592794643563">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001668" />
+    <state width="1358" height="537" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303900" />
+    <state width="1358" height="329" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594517490219" />
+    <state width="1358" height="329" key="GridCell.Tab.1.bottom" timestamp="1594517490222">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643563" />
-    <state width="1256" height="318" key="GridCell.Tab.1.center" timestamp="1592794643563">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001670" />
+    <state width="1358" height="537" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303901" />
+    <state width="1358" height="329" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594517490222" />
+    <state width="1358" height="329" key="GridCell.Tab.1.center" timestamp="1594517490221">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643563" />
-    <state width="1256" height="318" key="GridCell.Tab.1.left" timestamp="1592794643563">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001669" />
+    <state width="1358" height="537" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303900" />
+    <state width="1358" height="329" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1594517490221" />
+    <state width="1358" height="329" key="GridCell.Tab.1.left" timestamp="1594517490220">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643563" />
-    <state width="1256" height="318" key="GridCell.Tab.1.right" timestamp="1592794643563">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001669" />
+    <state width="1358" height="537" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303900" />
+    <state width="1358" height="329" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1594517490220" />
+    <state width="1358" height="329" key="GridCell.Tab.1.right" timestamp="1594517490221">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1256" height="318" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592794643563" />
-    <state x="970" y="173" key="Maven.ArtifactSearchDialog" timestamp="1592081497629">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1358" height="329" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1594401001669" />
+    <state width="1358" height="537" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594438303901" />
+    <state width="1358" height="329" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1594517490221" />
+    <state width="1358" height="286" key="GridCell.Tab.2.bottom" timestamp="1594517354767">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="286" key="GridCell.Tab.2.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594517354767" />
+    <state width="1358" height="286" key="GridCell.Tab.2.center" timestamp="1594517354766">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="286" key="GridCell.Tab.2.center/0.23.1440.877@0.23.1440.877" timestamp="1594517354766" />
+    <state width="1358" height="286" key="GridCell.Tab.2.left" timestamp="1594517354766">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="286" key="GridCell.Tab.2.left/0.23.1440.877@0.23.1440.877" timestamp="1594517354766" />
+    <state width="1358" height="286" key="GridCell.Tab.2.right" timestamp="1594517354767">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="286" key="GridCell.Tab.2.right/0.23.1440.877@0.23.1440.877" timestamp="1594517354767" />
+    <state x="2410" y="199" key="Maven.ArtifactSearchDialog" timestamp="1594432054861">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="970" y="173" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592081497629" />
+    <state x="2410" y="199" key="Maven.ArtifactSearchDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1594432054861" />
     <state x="757" y="261" key="RollbackChangesDialog" timestamp="1593071088767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="261" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593071088767" />
-    <state x="182" y="289" width="999" height="739" key="SettingsEditor" timestamp="1593579687969">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="137" y="178" width="900" height="722" key="SettingsEditor" timestamp="1594515203425">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="182" y="289" width="999" height="739" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593579687969" />
+    <state x="137" y="178" width="900" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1594515203425" />
     <state x="107" y="100" width="753" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1593591132826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -237,6 +300,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/DayController.java</url>
           <line>38</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledUpdateController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledUpdateController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
