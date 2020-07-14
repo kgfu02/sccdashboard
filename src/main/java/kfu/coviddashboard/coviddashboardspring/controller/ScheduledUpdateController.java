@@ -1,5 +1,7 @@
 package kfu.coviddashboard.coviddashboardspring.controller;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -37,8 +39,8 @@ public class ScheduledUpdateController {
     @Autowired
     private DayRepository dayrepository;
 
-    @Scheduled(fixedRate = 10000)
-    public void updateCityCases() throws JsonProcessingException, JSONException {
+    @Scheduled(fixedRate = 600000)
+    public void updateCityCases() throws IOException, JSONException {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> response
                 = restTemplate.getForEntity(cityDataUrl, String.class);
@@ -57,15 +59,23 @@ public class ScheduledUpdateController {
         DayComparatorNameTime daycomparatornametime = new DayComparatorNameTime();
         Collections.sort(d, daycomparatornametime);
         Day x = d.get(d.size() - 1); // get latest day from san jose
+        FileWriter myWriter = new FileWriter("log.txt", true);
         if (x.getcount() != map.get("san jose").intValue()) {
             // change has occured in san jose; can be more robust by comparing total
             postData(map);
+
+            myWriter.write("Updated database at " + new Date() + "\n");
+            myWriter.close();
+        }
+        else {
+            myWriter.write("Checked database at " + new Date() + "\n");
+            myWriter.close();
         }
 
     }
 
     public void postData(Map<String, Integer> map) {
-        Date date = new Date();
+        Date date = new Date(System.currentTimeMillis() - 3600 * 1000*7); // convert from utc to pdt (-7 hrs)
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
             dayrepository.postData(entry.getKey(),entry.getValue(),java.time.LocalDate.now().toString());
