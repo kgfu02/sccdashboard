@@ -20,12 +20,12 @@ public class DayController {
 
     @GetMapping("/days")
     public List<Day> getAllDays() {
-        return dayrepository.findAll();
+        return dayrepository.findDaysAllCity();
     }
     @GetMapping("/days/{city}")
     public List<String> getAllDays(@PathVariable(value = "city") String city) {
         DayComparatorTime daycomparatortime = new DayComparatorTime();
-        List<Day> arr= dayrepository.findDayByCity(city);
+        List<Day> arr= dayrepository.findDaysByCity(city);
         Collections.sort(arr, daycomparatortime);
         ArrayList<String> ret= new ArrayList<String>();
         for(Day d:arr) {
@@ -37,7 +37,7 @@ public class DayController {
     @GetMapping("/days/cities")
     public ArrayList<ArrayList<String>> getAllCityCounts() {
         DayComparatorNameTime daycomparatornametime = new DayComparatorNameTime();
-        List<Day> arr= dayrepository.findAll();
+        List<Day> arr= dayrepository.findDaysAllCity();
         Collections.sort(arr, daycomparatornametime);
         ArrayList<ArrayList<String>> ret= new ArrayList<ArrayList<String>>();
         String prev = "";
@@ -64,7 +64,7 @@ public class DayController {
     @GetMapping("/days/timestamps")
     public List<String> getSortedTimestamps() {
         DayComparatorTime daycomparatortime = new DayComparatorTime();
-        List<Day> arr = dayrepository.findAll();
+        List<Day> arr = dayrepository.findDaysAllCity();
         Collections.sort(arr, daycomparatortime);
         ArrayList<String> ret = new ArrayList<String>();
         for(Day d:arr) {

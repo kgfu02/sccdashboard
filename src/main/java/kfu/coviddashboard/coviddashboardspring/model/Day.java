@@ -48,5 +48,4 @@ public class Day{
         this.city = city;
     }
 
-
 }

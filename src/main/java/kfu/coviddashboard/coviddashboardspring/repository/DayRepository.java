@@ -12,10 +12,26 @@ import java.util.List;
 
 public interface DayRepository extends JpaRepository<Day,Integer> {
     @Query(value = "select * from dashboardtable where city = ?1", nativeQuery = true)
-    List<Day> findDayByCity(String city);
+    List<Day> findDaysByCity(String city);
+
+    @Query(value = "select * from dashboardtable", nativeQuery = true)
+    List<Day> findDaysAllCity();
 
     @Transactional
     @Modifying
     @Query(value = "insert into dashboardtable (city, count, timestamp) values (:city,:count,:time)", nativeQuery = true)
-    void postData(@Param("city") String city,@Param("count") Integer count,@Param("time") String time);
+    void postDataCity(@Param("city") String city,@Param("count") Integer count,@Param("time") String time);
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    @Query(value = "select * from zipcodetable where timestamp = ?1", nativeQuery = true)
+    List<Day> findZipcodeDaysByDate(String time);
+
+    @Query(value = "select * from zipcodetable", nativeQuery = true)
+    List<Day> findZipcodeDaysAll();
+
+    @Transactional
+    @Modifying
+    @Query(value = "insert into zipcodetable (zipcode, count, timestamp) values (:city,:count,:time)", nativeQuery = true)
+    void postDataZipcode(@Param("city") String city,@Param("count") Integer count,@Param("time") String time);
 }
