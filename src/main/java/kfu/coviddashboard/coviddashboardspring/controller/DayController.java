@@ -42,13 +42,13 @@ public class DayController {
         ArrayList<ArrayList<String>> ret= new ArrayList<ArrayList<String>>();
         String prev = "";
         for(int i = 0; i<arr.size();i++) {
-            if(!arr.get(i).getCity().equals(prev)){//make new list
+            if(!arr.get(i).getName().equals(prev)){//make new list
                 ret.add(new ArrayList<String>());
                 if(arr.get(i).getcount()==null)
                     ret.get(ret.size()-1).add(null);
                 else {
                     ret.get(ret.size() - 1).add(arr.get(i).getcount().toString());
-                    prev = arr.get(i).getCity();
+                    prev = arr.get(i).getName();
                 }
             }
             else {

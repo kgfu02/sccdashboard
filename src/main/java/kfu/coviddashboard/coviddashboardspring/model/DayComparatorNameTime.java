@@ -2,9 +2,9 @@ package kfu.coviddashboard.coviddashboardspring.model;
 
 import java.util.Comparator;
 
-public class DayComparatorNameTime implements Comparator<Day> {
-    public int compare(Day d1, Day d2){
-        int ret = d1.getCity().compareTo(d2.getCity());
+public class DayComparatorNameTime implements Comparator<Entry> {
+    public int compare(Entry d1, Entry d2){
+        int ret = d1.getName().compareTo(d2.getName());
         if(ret!=0)
             return ret;
         else

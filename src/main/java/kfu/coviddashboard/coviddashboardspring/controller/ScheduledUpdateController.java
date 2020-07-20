@@ -3,8 +3,12 @@ package kfu.coviddashboard.coviddashboardspring.controller;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -12,9 +16,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.core.util.InternCache;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
-import kfu.coviddashboard.coviddashboardspring.model.Day;
-import kfu.coviddashboard.coviddashboardspring.model.DayComparatorNameTime;
-import kfu.coviddashboard.coviddashboardspring.model.DayComparatorTime;
+import kfu.coviddashboard.coviddashboardspring.model.*;
 import kfu.coviddashboard.coviddashboardspring.repository.DayRepository;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,10 +48,10 @@ public class ScheduledUpdateController {
 
     @Scheduled(cron = "0 0 0 ? * *", zone="America/Los_Angeles")
     public void reset() {
-        updatedCity = false;
+        updatedCity = updatedZipcode = false;
     }
     //city Update
-    @Scheduled(cron = "0 0/10 12/1 ? * *", zone="America/Los_Angeles")
+    @Scheduled(cron = "0 0/10 11/1 ? * *", zone="America/Los_Angeles")
     public void updateCityCases() throws IOException, JSONException, ParseException {
         if(updatedCity) {return;}
 
@@ -72,25 +74,25 @@ public class ScheduledUpdateController {
         Day x = d.get(d.size() - 1); // get latest day from san jose
         FileWriter myWriter = new FileWriter("log.txt", true);
         // timestamp of update
-        Calendar cal = Calendar.getInstance();
-        TimeZone pdt = TimeZone.getTimeZone("PDT");
-        cal.setTimeZone(pdt);
+        ZoneId zoneId = ZoneId.of("US/Pacific");
+        ZonedDateTime zt = ZonedDateTime.now(zoneId);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
         if (x.getcount() != map.get("san jose").intValue()) {
             // change has occured in san jose; can be more robust by comparing total
             postData(map,"dashboardtable");
             updatedCity = true;
-            myWriter.write("Updated cities database at " + cal.getTime() + "\n");
+            myWriter.write("Updated cities database at " + dtf.format(zt) + "\n");
             myWriter.close();
         }
         else {
-            myWriter.write("Checked cities database at " + cal.getTime() + "\n");
+            myWriter.write("Checked cities database at " + dtf.format(zt) + "\n");
             myWriter.close();
         }
 
     }
-    //0 0/10 12/1 ? * *
-    //* * 12/1 ? * *
-    @Scheduled(cron = "* * 1/1 ? * *", zone="America/Los_Angeles")
+    //0 0/10 11/1 ? * *
+    //* * * ? * *
+    @Scheduled(cron = "0 0/10 11/1 ? * *", zone="America/Los_Angeles")
     public void updateZipcodeCases() throws IOException, JSONException, ParseException {
         if(updatedZipcode) {return;}
 
@@ -113,56 +115,51 @@ public class ScheduledUpdateController {
         }
         System.out.println("///////" + map + "///////");
         //check if updated
-        Calendar cal = Calendar.getInstance();
-        TimeZone pdt = TimeZone.getTimeZone("PDT");
-        cal.setTimeZone(pdt);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Timestamp ts = new Timestamp(cal.getTimeInMillis());
-        List<Day> d = dayrepository.findZipcodeDaysAll();
-
+        ZoneId zoneId = ZoneId.of("US/Pacific");
+        ZonedDateTime zt = ZonedDateTime.now(zoneId);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
+        List<ZipcodeDay> d = dayrepository.findZipcodeDaysAll();
         //sum cases
         int yesterdaySum = sumDays(d);
-
         FileWriter myWriter = new FileWriter("log.txt", true);
         if (todaySum > yesterdaySum) {
             // change has occured in total cases, update
             postData(map,"zipcodetable");
             updatedZipcode = true;
-            myWriter.write("Updated zipcode database at " + cal.getTime() + "\n");
+            myWriter.write("Updated zipcode database at " + dtf.format(zt) + "\n");
             myWriter.close();
         }
         else {
-            myWriter.write("Checked zipcode database at " + cal.getTime() + "\n");
+            myWriter.write("Checked zipcode database at " + dtf.format(zt) + "\n");
             myWriter.close();
         }
 
     }
 
     public void postData(Map<String, Integer> map, String tableName) {
-        Calendar cal = Calendar.getInstance();
-        TimeZone pdt = TimeZone.getTimeZone("PDT");
-        cal.setTimeZone(pdt);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Timestamp ts = new Timestamp(cal.getTimeInMillis());
+        ZoneId zoneId = ZoneId.of("US/Pacific");
+        ZonedDateTime zt = ZonedDateTime.now(zoneId);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
             if(tableName.equals("dashboardtable"))
-                dayrepository.postDataCity(entry.getKey(),entry.getValue(),sdf.format(ts));
+                dayrepository.postDataCity(entry.getKey(),entry.getValue(),dtf.format(zt));
             else
-                dayrepository.postDataZipcode(entry.getKey(),entry.getValue(),sdf.format(ts));
+                dayrepository.postDataZipcode(entry.getKey(),entry.getValue(),dtf.format(zt));
 
         }
     }
 
-    private int sumDays(List<Day> days) {
+    private int sumDays(List<? extends Entry> days) {
         if(days.size()==0) {return 0;}
         DayComparatorTime daycomparatortime = new DayComparatorTime();
         Collections.sort(days, daycomparatortime);
-        Timestamp yesterday = days.get(days.size()-1).getTimestamp();
+        Timestamp yesterday = days.get(days.size()-1).getTimestamp(); //not necessarily yesterday, most recent entry is more accurate
         int i = days.size()-1;
         int sum = 0;
-        while(i>=0 && days.get(i-1).getTimestamp().equals(yesterday)) {
-            sum += days.get(i-1).getcount();
+        while(i>=0 && days.get(i).getTimestamp().equals(yesterday)) {
+            sum += days.get(i).getcount();
             i--;
         }
         return sum;

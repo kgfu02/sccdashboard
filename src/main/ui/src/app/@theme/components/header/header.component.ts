@@ -76,8 +76,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
       )
       .subscribe(themeName => this.currentTheme = themeName);
 
-    this.currentday = this.datePipe.transform(new Date, "yyyy/MM/dd");
-    this.casesservice.getTimestamps().subscribe(data => this.updateday = data[data.length-1]);
+    this.currentday = this.datePipe.transform(new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"}), "yyyy/MM/dd");
+    this.casesservice.getTimestamps().subscribe(data => {this.updateday = data[data.length-1];console.log(this.updateday,this.currentday)});
+
   }
 
   ngOnDestroy() {
