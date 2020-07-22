@@ -35,7 +35,7 @@ nb-card .box{
   width: 400px;
   border: #0b2e13;
   height: 700px;
-  margin-top: 46px;
+  margin-top: 43px;
   @media (max-width:1000px){
     width: auto;
     margin-top: 0px;
@@ -60,9 +60,17 @@ button {
 .active {
   background-color: #ffffff;
   text-shadow:0px 0px 1.5px black;
+  @media (max-width:1000px){
+    font-size: 3.1vw;
+    padding: 6px 5px
+  }
 }
 .inactive {
   background-color: #f0f0f9;
+  @media (max-width:1000px) {
+    font-size: 3.1vw;
+    padding: 6px 5px
+  }
 }
 .left {
   border-top-left-radius: 7px;

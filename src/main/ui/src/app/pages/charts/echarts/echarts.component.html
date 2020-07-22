@@ -20,8 +20,9 @@
     <!--<button (click) = "selectAll();">Select All</button> <button (click) = "unselectAll();">Unselect All</button>-->
 
     <div style="padding:0px 10px 10px 10px">
-      <button class ='left' (click)="ToggleRawOn()" [ngClass]="{'active': this.raw==false, 'inactive': this.raw==true}">Total Cases</button>
-      <button class ='right' (click)="ToggleRawOff()" [ngClass]="{'active': this.raw==true, 'inactive': this.raw==false}">Per 100,000</button>
+      <button class ='left' (click)="ToggleRawOn()" [ngClass]="{'active': this.mode=='total', 'inactive': this.mode!='total'}">Total Cases</button>
+      <button                (click)="TogglePerOn()" [ngClass]="{'active': this.mode=='per', 'inactive': this.mode!='per'}">Per 100,000</button>
+      <button class ='right' (click)="ToggleNewOn()" [ngClass]="{'active': this.mode=='new', 'inactive': this.mode!='new'}">New Cases (7-day average)</button>
     </div>
 
     <nb-card>
@@ -47,7 +48,7 @@
     <nb-card>
       <nb-card-body>
         <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. Data where cumulative cases decrease are likely due to reclassification of cases.</p>
-        <p>For reference, as of 7/12 the US has 987.3 cases per 100k, California has 812, and SCC has 327. 1000 cases per 100k = 1%</p>
+        <p>For reference, as of 7/19 the US has 1,128 cases per 100k, California has 949, and SCC has 387. 1,000 cases per 100k = 1%</p>
       </nb-card-body>
     </nb-card>
   </div>

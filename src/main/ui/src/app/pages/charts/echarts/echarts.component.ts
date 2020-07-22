@@ -22,7 +22,7 @@ export class EchartsComponent implements AfterViewInit{
   screenHeight: number;
   screenWidth: number;
   chartHeight: string;
-  raw: boolean = false;
+  mode: string = 'total';
 
   constructor(private casesService: CasesService) {
     this.getScreenSize();
@@ -63,13 +63,18 @@ export class EchartsComponent implements AfterViewInit{
     this.casesService.unselAll();
   }
 
+  // total = cumulative
   parentSubject: Subject<any> = new Subject();
   ToggleRawOn() {
-    this.raw = false;
-    this.parentSubject.next('RawOn');
+    this.mode = 'total';
+    this.parentSubject.next('total');
   }
-  ToggleRawOff() {
-    this.raw = true;
-    this.parentSubject.next('RawOff');
+  TogglePerOn() {
+    this.mode = 'per';
+    this.parentSubject.next('per');
+  }
+  ToggleNewOn() {
+    this.mode = 'new';
+    this.parentSubject.next('new');
   }
 }

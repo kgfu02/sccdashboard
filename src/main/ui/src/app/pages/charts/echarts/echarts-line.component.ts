@@ -14,6 +14,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
   options: any = {};
   themeSubscription: any;
   days: Day[];
+  timestamps: String[];
   chartInstance: any;
   sizing: NbComponentSize = 'medium';
   names: String[] = ['Campbell', 'Cupertino', 'Gilroy', 'Los Altos', 'Los Gatos',
@@ -63,7 +64,8 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
 
       this.casesService.getTimestamps().subscribe(response => {
         this.casesService.getCityCases().subscribe(cases => {
-          console.log(cases[0]);
+          //console.log(cases[0]);
+          this.timestamps = response;
           if (this.screenWidth < 1000) {
             this.gridTop = '28%';
           }
@@ -248,10 +250,12 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
     });
     this.parentSubject.subscribe(event => {
       console.log(event)
-      if (event == 'RawOn')
+      if (event == 'total')
         this.toggleRawOn();
+      else if (event == 'per') // per 100000
+        this.togglePerOn();
       else
-        this.toggleRawOff();
+        this.toggleNewOn();
     });
   }
 
@@ -260,11 +264,11 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
 
   toggleRawOn() {
     this.casesService.getCityCases().subscribe(cases => {
-      this.setData(cases);
+      this.setData(cases,"raw");
     });
   }
 
-  toggleRawOff() {
+  togglePerOn() {
     this.casesService.getCityCases().subscribe(cases => {
         for (let i = 0; i<cases.length; i++) {
           for (let j = 0; j<cases[i].length; j++) {
@@ -274,13 +278,51 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
               cases[i][j] = null;
           }
         }
-
-        this.setData(cases);
+        cases[0][0] = null;
+        this.setData(cases,"per");
       }
     );
   }
 
-  setData(cases: String[][]) {
+  /*toggleNewOn() {
+    this.casesService.getCityCases().subscribe(cases => {
+        var newCases: String[][] = []
+        for (let i = 0; i<cases.length; i++) {
+          newCases.push([])
+          for (let j = 7; j<cases[i].length; j++) { // 7 to offset initial null values
+            if(cases[i][j]!=null && cases[i][j-1]!=null)
+              newCases[i].push(String(+cases[i][j]-(+cases[i][j-1]))) // + converts string to num?
+            else
+              newCases[i].push(null)
+          }
+          console.log(newCases)
+        }
+        this.setData(newCases,"new")
+      }
+    );
+    // set categories
+  }*/
+
+  toggleNewOn() { // 7 day avg
+    this.casesService.getCityCases().subscribe(cases => {
+        var newCases: String[][] = []
+        for (let i = 0; i<cases.length; i++) {
+          newCases.push([])
+          for (let j = 7; j<cases[i].length; j++) { // 7 to offset initial null values
+            if(cases[i][j]!=null && cases[i][j-7]!=null)
+              newCases[i].push(String(Math.round((+cases[i][j]-(+cases[i][j-7]))/7.0*10)/10 ))  // + converts string to num?
+            else
+              newCases[i].push(null)
+          }
+          console.log(newCases)
+        }
+        this.setData(newCases,"new")
+      }
+    );
+    // set categories
+  }
+
+  setData(cases: String[][], type: string) {
     for (let i = 0; i<cases.length; i++) {
       this.chartInstance.setOption({
         series: [
@@ -290,6 +332,26 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
           }
         ]
       })
+    }
+    if (type == "new") {
+      this.chartInstance.setOption({
+        xAxis: [
+          {
+            type: 'category',
+            data: this.timestamps.slice(7),
+          }
+        ]
+      });
+    }
+    else {
+      this.chartInstance.setOption({
+        xAxis: [
+          {
+            type: 'category',
+            data: this.timestamps,
+          }
+        ]
+      });
     }
   }
 
@@ -304,16 +366,6 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         name: arr[i],
       });
     }
-    /*this.chartInstance.setOption(
-      {
-        series: [
-          {
-            name: 'San Jose',
-            data: [1,2,3],
-          }
-        ]
-      }
-    )*/
   }
 
   unselectAll() {
