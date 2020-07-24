@@ -61,15 +61,15 @@ button {
   background-color: #ffffff;
   text-shadow:0px 0px 1.5px black;
   @media (max-width:1000px){
-    font-size: 3.1vw;
-    padding: 6px 5px
+    font-size: 11px;
+    padding: 6px 5px;
   }
 }
 .inactive {
   background-color: #f0f0f9;
   @media (max-width:1000px) {
-    font-size: 3.1vw;
-    padding: 6px 5px
+    font-size: 11px;
+    padding: 6px 5px;
   }
 }
 .left {
