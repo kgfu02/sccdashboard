@@ -34,7 +34,7 @@ nb-card .box{
 .caseTable{
   width: 400px;
   border: #0b2e13;
-  height: 700px;
+
   margin-top: 43px;
   @media (max-width:1000px){
     width: auto;
@@ -80,4 +80,17 @@ button {
 .right {
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-red {
+  color: red;
+}
+
+.metricEntry {
+  padding-top: 0;
+  padding-bottom: 10px;
 }

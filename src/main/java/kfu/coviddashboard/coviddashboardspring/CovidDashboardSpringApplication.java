@@ -12,7 +12,6 @@ import java.util.TimeZone;
 public class CovidDashboardSpringApplication {
 
 	public static void main(String[] args) {
-		System.out.println("changed");
 		SpringApplication.run(CovidDashboardSpringApplication.class, args);
 	}
 }

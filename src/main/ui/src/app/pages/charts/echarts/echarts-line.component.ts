@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, HostListener, Input, OnDestroy} from '@angular/core';
 import {NbComponentSize, NbThemeService} from '@nebular/theme';
-import {CasesService} from '../../../cases.service';
+import {CasesService} from '../../../services/cases.service';
 import {Subject} from 'rxjs';
 import {Day} from '../../../day';
 

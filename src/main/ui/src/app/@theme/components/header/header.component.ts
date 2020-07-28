@@ -5,7 +5,7 @@ import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import {CasesService} from "../../../cases.service";
+import {CasesService} from "../../../services/cases.service";
 import {DatePipe} from "@angular/common";
 
 @Component({

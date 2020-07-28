@@ -13,7 +13,8 @@ import { Component } from '@angular/core';
         <ng-content select="nb-menu"></ng-content>
       </nb-sidebar>-->
 
-      <nb-layout-column style="padding: 1rem 1rem 5rem;">
+      <!--Controls important padding stuff!-->
+      <nb-layout-column style="padding: 1rem 1rem 2rem;">
         <ng-content select="router-outlet"></ng-content>
       </nb-layout-column>
 
