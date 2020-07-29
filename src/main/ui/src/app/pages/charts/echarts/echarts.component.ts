@@ -27,6 +27,7 @@ export class EchartsComponent implements AfterViewInit{
   mode: string = 'total';
   totalCases = new Array(3);
   totalDeaths = new Array(3);
+  newCases: any
   currentDay: string
   latestMetricDay: string
   latestCityDay: string
@@ -71,6 +72,9 @@ export class EchartsComponent implements AfterViewInit{
         this.totalCases[2] = "+";
       else
         this.totalCases[2] = "";
+    })
+    this.keyMetricService.getKeyMetric("newCases").subscribe(newCases => {
+      this.newCases = newCases[0].metric;
     })
     this.keyMetricService.getKeyMetric("totalDeaths").subscribe(deaths => {
       this.totalDeaths[0] = deaths[0];

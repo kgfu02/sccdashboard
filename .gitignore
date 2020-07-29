@@ -31,3 +31,5 @@ build/
 .vscode/
 /src/main/resources/static/
 /log.txt
+/logKeyMetric.txt
+/chromedriver.exe

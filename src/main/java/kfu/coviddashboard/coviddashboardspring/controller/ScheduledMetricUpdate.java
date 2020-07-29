@@ -46,13 +46,13 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 @Configuration
 @EnableScheduling
 public class ScheduledMetricUpdate {
-    private boolean updatedCases,updatedDeaths;
+    private boolean updatedCases,updatedDeaths,updatedNewCases;
     @Autowired
     private KeyMetricRepository keyMetricRepository;
 
     @Scheduled(cron = "0 0 0 ? * *", zone="America/Los_Angeles")
     public void reset() {
-        updatedCases = updatedDeaths = false;
+        updatedCases = updatedDeaths = updatedNewCases = false;
     }
 
     //0 0/10 11/1 ? * *
@@ -69,7 +69,7 @@ public class ScheduledMetricUpdate {
         WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
         String pageText = driver.findElement(By.tagName("Body")).getText();
         driver.quit();
-        scrape("totalCases",pageText);
+        updatedCases = scrape("totalCases",pageText);
     }
 
     public void updateCumulativeDeaths() throws IOException, InterruptedException {
@@ -77,15 +77,15 @@ public class ScheduledMetricUpdate {
         WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
         String pageText = driver.findElement(By.tagName("Body")).getText();
         driver.quit();
-        scrape("totalDeaths",pageText);
+        updatedDeaths = scrape("totalDeaths",pageText);
     }
 
     public void updateNewCases() throws IOException, InterruptedException {
-        if(updatedCases) {return;}
+        if(updatedNewCases) {return;}
         WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
         String pageText = driver.findElement(By.tagName("Body")).getText();
         driver.quit();
-        scrape("newCases",pageText);
+        updatedNewCases = scrape("newCases",pageText) ;
     }
 
     private boolean checkNum(String str) { // check if str is purely a number
@@ -98,7 +98,7 @@ public class ScheduledMetricUpdate {
     }
 
     private WebDriver getDriver(String url) throws InterruptedException {
-        String chromeDriverPath = "chromedriver.exe";
+        String chromeDriverPath = "chromedriver";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu","--window-size=1920,1200","--ignore-certificate-errors");
@@ -111,7 +111,7 @@ public class ScheduledMetricUpdate {
         return driver;
     }
 
-    private void scrape(String type, String pageText) throws IOException { // posts scraped statistic of target type
+    private boolean scrape(String type, String pageText) throws IOException { // posts scraped statistic of target type
         String line=null;
         int counter = 0; // 1 = total deaths, 2 = new cases, 3 = new deaths, 4 = total hospitalizations, 5 = new hospitalizations, 6 = total cases
         int counterTarget = getCounterIndex(type);
@@ -129,17 +129,17 @@ public class ScheduledMetricUpdate {
                 if (counter == counterTarget && !updated) { // if at target statistic and date has not been seen before
                     // then update
                     keyMetricRepository.postData(type,Integer.parseInt(line),getDate());
-                    if (type == "totalCases") {updatedCases = true;}
-                    else if (type == "totalDeaths") {updatedDeaths = true;}
                     ZoneId zoneId = ZoneId.of("US/Pacific");
                     ZonedDateTime zt = ZonedDateTime.now(zoneId);
                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
                     FileWriter myWriter = new FileWriter("logKeyMetric.txt", true);
                     myWriter.write("Updated " + type + " database at " + dtf.format(zt) + "\n");
                     myWriter.close();
+                    return true;
                 }
             }
         }
+        return false;
     }
 
     private int getCounterIndex(String type) { // returns index that statistic appears
