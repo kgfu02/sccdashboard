@@ -134,4 +134,5 @@
     "directive-class-suffix": true,
     "no-unused-variable": true
   }*/
+  "jsRules": { "no-empty": true }
 }
