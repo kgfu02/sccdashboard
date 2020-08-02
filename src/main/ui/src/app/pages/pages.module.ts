@@ -8,6 +8,7 @@ import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { NbCardModule, NbButtonModule } from '@nebular/theme';
+import { ZipcodeComponent } from './zipcode/zipcode.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { NbCardModule, NbButtonModule } from '@nebular/theme';
   ],
   declarations: [
     PagesComponent,
+    ZipcodeComponent,
   ],
 })
 export class PagesModule {

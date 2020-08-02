@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import {AboutComponent} from "./about/about.component";
+import {ZipcodeComponent} from "./zipcode/zipcode.component";
 
 const routes: Routes = [{
   path: '',
@@ -72,6 +73,10 @@ const routes: Routes = [{
     {
       path: 'about',
       component: AboutComponent,
+    },
+    {
+      path: 'zipcodes',
+      component: ZipcodeComponent
     },
     {
       path: '',

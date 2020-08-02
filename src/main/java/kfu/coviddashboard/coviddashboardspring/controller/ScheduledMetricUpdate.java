@@ -47,6 +47,7 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 @EnableScheduling
 public class ScheduledMetricUpdate {
     private boolean updatedCases,updatedDeaths,updatedNewCases;
+    private String chromeDriverPath = "chromedriver";
     @Autowired
     private KeyMetricRepository keyMetricRepository;
 
@@ -98,10 +99,9 @@ public class ScheduledMetricUpdate {
     }
 
     private WebDriver getDriver(String url) throws InterruptedException {
-        String chromeDriverPath = "chromedriver";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu","--window-size=1920,1200","--ignore-certificate-errors");
+        options.addArguments("--headless", "--disable-gpu","--window-size=1920,1200","--ignore-certificate-errors","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, 100);
         driver.get(url);

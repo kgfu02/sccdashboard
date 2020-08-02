@@ -278,7 +278,6 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
               cases[i][j] = null;
           }
         }
-        cases[0][0] = null;
         this.setData(cases,"per");
       }
     );

@@ -9,6 +9,7 @@ import {
   NbResetPasswordComponent,
 } from '@nebular/auth';
 import {AboutComponent} from "./pages/about/about.component";
+import {ZipcodeComponent} from "./pages/zipcode/zipcode.component";
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
     path: 'about',
     component: AboutComponent,
   },
+  {
+    path: 'zipcodes',
+    component: ZipcodeComponent,
+  }
   /*{
     path: 'pages',
     loadChildren: () => import('./pages/pages.module')
