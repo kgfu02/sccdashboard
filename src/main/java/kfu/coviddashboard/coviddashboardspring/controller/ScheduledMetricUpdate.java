@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.sun.org.apache.xpath.internal.objects.XString;
+import kfu.coviddashboard.coviddashboardspring.CovidDashboardSpringApplication;
 import kfu.coviddashboard.coviddashboardspring.repository.DayRepository;
 import kfu.coviddashboard.coviddashboardspring.repository.KeyMetricRepository;
 import org.json.JSONArray;
@@ -19,6 +20,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
@@ -48,6 +51,7 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 public class ScheduledMetricUpdate {
     private boolean updatedCases,updatedDeaths,updatedNewCases;
     private String chromeDriverPath = "chromedriver";
+    final static Logger logger = LoggerFactory.getLogger(ScheduledMetricUpdate.class);
     @Autowired
     private KeyMetricRepository keyMetricRepository;
 
@@ -135,6 +139,7 @@ public class ScheduledMetricUpdate {
                     FileWriter myWriter = new FileWriter("logKeyMetric.txt", true);
                     myWriter.write("Updated " + type + " database at " + dtf.format(zt) + "\n");
                     myWriter.close();
+                    logger.info("Updated " + type + " database at " + dtf.format(zt));
                     return true;
                 }
             }
