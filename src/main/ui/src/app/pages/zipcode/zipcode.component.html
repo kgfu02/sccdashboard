@@ -1,1 +1,14 @@
-<p>zipcode works!</p>
+<div style="padding:0px 10px 10px 10px">
+  <button class ='left' (click)="ToggleRawOn()" [ngClass]="{'active': this.mode=='total', 'inactive': this.mode!='total'}">Total Cases</button>
+  <button                (click)="TogglePerOn()" [ngClass]="{'active': this.mode=='per', 'inactive': this.mode!='per'}">Per 100,000</button>
+  <button class ='right' (click)="ToggleNewOn()" [ngClass]="{'active': this.mode=='new', 'inactive': this.mode!='new'}">New Cases (7-day average)</button>
+</div>
+<nb-card>
+  <nb-card-header>
+    Add a Zipcode: <input (keyup.enter)="formEnter($event)" [(ngModel)]='zipcode'>
+  </nb-card-header>
+<nb-card-body>
+<div echarts (chartInit)="onChartInit($event)" [options]="options" class="echart"></div>
+</nb-card-body>
+</nb-card>
+<iframe class="map" style="display:block;margin: auto;"frameborder="0" scrolling="yes" allowfullscreen="" src="https://sccgov.maps.arcgis.com/apps/webappviewer/index.html?id=b90dc6181a9f481a956aef9218b84d0a&mobileBreakPoint=500&mapOnly=true&showLayers=COVID%20Cases%20By%20ZipCode"></iframe>

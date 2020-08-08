@@ -156,6 +156,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Campbell',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[0],
               },
               {
@@ -163,6 +164,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Cupertino',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[1],
               },
               {
@@ -170,6 +172,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Gilroy',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[2],
               },
               {
@@ -177,6 +180,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Los Altos',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[3],
               },
               {
@@ -184,6 +188,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Los Gatos',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[4],
               },
               {
@@ -191,6 +196,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Milpitas',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[5],
               },
               {
@@ -198,6 +204,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Morgan Hill',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[6],
               },
               {
@@ -205,6 +212,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Mountain View',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[7],
               },
               {
@@ -212,6 +220,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Palo Alto',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[8],
               },
               {
@@ -219,6 +228,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'San Jose',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[9],
               },
               {
@@ -226,6 +236,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Santa Clara',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[10],
               },
               {
@@ -233,6 +244,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Saratoga',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[11],
               },
               {
@@ -240,6 +252,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Sunnyvale',
                 type: 'line',
+                symbolSize: 6,
                 data: cases[12],
               },
             ],
@@ -337,7 +350,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         xAxis: [
           {
             type: 'category',
-            data: this.timestamps.slice(7),
+            data: this.timestamps.slice(7), //slice to offset null timestampos at beginning
           }
         ]
       });

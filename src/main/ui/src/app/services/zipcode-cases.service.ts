@@ -12,4 +12,7 @@ export class ZipcodeCasesService {
   getZipcodeCases(): Observable<Map<string,number >> {
     return this.http.get< Map<string,number>>(`${this.baseUrl}/zipcodes/cases`);
   }
+  getZipcodeTimestamps(): Observable<Map<string,number >> {
+    return this.http.get< Map<string,number>>(`${this.baseUrl}/zipcodes/timestamps`);
+  }
 }

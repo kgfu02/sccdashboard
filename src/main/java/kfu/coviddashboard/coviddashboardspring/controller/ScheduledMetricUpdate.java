@@ -60,6 +60,7 @@ public class ScheduledMetricUpdate {
         updatedCases = updatedDeaths = updatedNewCases = false;
     }
 
+    //0 0/1 11/1 ? * *
     //0 0/10 11/1 ? * *
     //* * * ? * *
     @Scheduled(cron = "0 0/10 11/1 ? * *", zone="America/Los_Angeles")

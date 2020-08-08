@@ -9,6 +9,10 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { NbCardModule, NbButtonModule } from '@nebular/theme';
 import { ZipcodeComponent } from './zipcode/zipcode.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartModule } from 'angular2-chartjs';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
@@ -19,6 +23,8 @@ import { ZipcodeComponent } from './zipcode/zipcode.component';
     ECommerceModule,
     MiscellaneousModule,
     NbCardModule,
+    NgxEchartsModule,
+    FormsModule,
   ],
   declarations: [
     PagesComponent,

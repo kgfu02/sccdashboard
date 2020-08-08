@@ -58,13 +58,14 @@
     }
 
     .logo{
-      padding: 0 1.25rem;
+      padding: 0 1rem;
       font-size: 1.75rem;
       @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
       @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
       white-space: nowrap;
       text-decoration: none;
       @media (max-width: 1000px) {
+        padding: 0 1rem;
         font-size: 1rem;
         white-space: normal;
         line-height: 95%;
