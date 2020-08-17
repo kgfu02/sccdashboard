@@ -47,9 +47,8 @@
 
     <nb-card>
       <nb-card-body>
-        <p style="color: red">California's CALREDIE reporting system has been having issues for the past few weeks. Recent test cases are likely to be undercounted.</p>
         <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. Data where cumulative cases decrease are likely due to reclassification of cases.</p>
-        <p>For reference, as of 8/6 the US has 1465 cases per 100k, California has 1387, and SCC has 595. 1,000 cases per 100k = 1%</p>
+        <p>For reference, as of 8/16 the US has 1629 cases per 100k, California has 1551, and SCC has 748. 1,000 cases per 100k = 1%</p>
       </nb-card-body>
     </nb-card>
   </div>
@@ -86,9 +85,9 @@
                 <th>New Cases</th>
               </tr>
               <tr *ngFor="let num of numbers">
-                <td>{{names[num]}}</td>
-                <td>{{todaycounts[num]}}</td>
-                <td>{{todaychange[num]}}</td>
+                <td class = "cityEntry">{{names[num]}}</td>
+                <td class = "cityEntry">{{todaycounts[num]}}</td>
+                <td class = "cityEntry">{{todaychange[num]}}</td>
               </tr>
             </table>
             <span *ngIf="latestMetricDay" style="font-size: 12px; line-height: 0; padding: 4px 2px 1px 2px; float:right;" [ngClass]="{'color-green': this.currentDay==this.latestCityDay, 'color-red': this.currentDay!=this.latestCityDay}">Updated {{latestCityDay}}</span>

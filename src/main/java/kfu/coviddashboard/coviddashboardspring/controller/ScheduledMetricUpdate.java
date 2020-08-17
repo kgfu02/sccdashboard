@@ -63,7 +63,7 @@ public class ScheduledMetricUpdate {
     //0 0/1 11/1 ? * *
     //0 0/10 11/1 ? * *
     //* * * ? * *
-    @Scheduled(cron = "0 0/10 11/1 ? * *", zone="America/Los_Angeles")
+    @Scheduled(cron = "0 0/30 11/1 ? * *", zone="America/Los_Angeles")
     public void update() throws IOException, JSONException, ParseException, InterruptedException {
         updateCumulativeCases();
         updateCumulativeDeaths();
@@ -123,8 +123,9 @@ public class ScheduledMetricUpdate {
         boolean updated = false;
         BufferedReader bufReader = new BufferedReader(new StringReader(pageText));
         while( (line=bufReader.readLine()) != null ) {
-            if (line.contains("Data last updated")) {
-                String update = line.substring(18);
+            if (line.contains("Data last updated on")) {
+                String update = line.substring(21);
+                //Data last updated on(21)
                 updated = alreadyUpdated(type, update);
                 /*if (updated && type == "totalCases") {updatedCases=true;}
                 else if (updated && type == "totalDeaths") {updatedDeaths=true;}*/
