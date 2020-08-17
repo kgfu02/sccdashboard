@@ -5,7 +5,7 @@
 </div>
 <nb-card>
   <nb-card-header>
-    Add a Zipcode: <input (keyup.enter)="formEnter($event)" [(ngModel)]='zipcode'>
+    Add a Zipcode: <input (keyup.enter)="formEnter($event)" (keyup.shift.enter)="formEnter($event)" [(ngModel)]='zipcode'>
   </nb-card-header>
 <nb-card-body>
 <div echarts (chartInit)="onChartInit($event)" [options]="options" class="echart"></div>
