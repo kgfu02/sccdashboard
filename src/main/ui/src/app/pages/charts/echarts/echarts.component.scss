@@ -99,3 +99,9 @@ button {
   padding-bottom: 7.5px;
   padding-top: 7.5px;
 }
+
+.chart {
+  @media (max-width:1000px){
+    padding-left: 70px;
+  }
+}

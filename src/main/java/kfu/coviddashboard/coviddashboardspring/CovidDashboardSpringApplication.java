@@ -24,7 +24,7 @@ public class CovidDashboardSpringApplication extends SpringBootServletInitialize
 		context = SpringApplication.run(CovidDashboardSpringApplication.class, args);
 	}
 
-	@Scheduled(cron = "0 0/1 11/1 ? * *", zone="America/Los_Angeles")
+	@Scheduled(cron = "0 0 10 ? * *", zone="America/Los_Angeles")
 	public static void restart() {
 		ApplicationArguments args = context.getBean(ApplicationArguments.class);
 

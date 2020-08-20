@@ -26,13 +26,13 @@
     </div>
 
     <nb-card>
-      <nb-card-header><h2 style="all:unset">Cumulative Cases by City</h2>
-          <nb-card-body class = "chart">
+      <nb-card-header><h1 style="all:unset">Covid Cases by City</h1>
+          <nb-card-body class = "chart" style="padding-right: 0px">
             <button nbButton [size]="this.sizing" (click)="selectAll();">
               Select All
             </button>
           </nb-card-body>
-          <nb-card-body>
+          <nb-card-body style="padding-left: 12px">
             <button nbButton [size]="this.sizing" (click)="unselectAll();">
               Unselect All
             </button>
@@ -41,13 +41,13 @@
         </nb-card-header>
       <!--style="border:red;height: 750px"-->
       <nb-card-body style="padding: 16px 14px">
-        <ngx-echarts-line style = {{this.chartHeight}} [parentSubject]="parentSubject"></ngx-echarts-line>
+        <ngx-echarts-line alt ="Interactive chart that displays COVID stats for cities in Santa Clara County" style = {{this.chartHeight}} [parentSubject]="parentSubject"></ngx-echarts-line>
       </nb-card-body>
     </nb-card>
 
     <nb-card>
       <nb-card-body>
-        <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. Data where cumulative cases decrease are likely due to reclassification of cases.</p>
+        <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. County-level stats and city-level stats usually update at separate times.</p>
         <p>For reference, as of 8/16 the US has 1629 cases per 100k, California has 1551, and SCC has 748. 1,000 cases per 100k = 1%</p>
       </nb-card-body>
     </nb-card>
@@ -66,7 +66,7 @@
                 <td style="padding-top: 0px">Total Deaths</td>
               </tr>
               <tr>
-                <td class = "metricEntry" style="color: #a70027;font-weight: bold;">{{totalCases[0].metric}} ({{totalCases[2]}}{{newCases}})</td>
+                <td class = "metricEntry" style="color: firebrick;font-weight: bold;">{{totalCases[0].metric}} ({{totalCases[2]}}{{newCases}})</td>
                 <td class = "metricEntry" style="color: gray;font-weight: bold;">{{totalDeaths[0].metric}} ({{totalDeaths[2]}}{{totalDeaths[0].metric-totalDeaths[1].metric}})</td>
               </tr>
             </table>

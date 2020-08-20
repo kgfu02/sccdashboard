@@ -65,6 +65,7 @@ public class ScheduledMetricUpdate {
     //* * * ? * *
     @Scheduled(cron = "0 0/30 11/1 ? * *", zone="America/Los_Angeles")
     public void update() throws IOException, JSONException, ParseException, InterruptedException {
+        logger.info("a");
         updateCumulativeCases();
         updateCumulativeDeaths();
         updateNewCases();
@@ -72,10 +73,15 @@ public class ScheduledMetricUpdate {
 
     public void updateCumulativeCases() throws IOException, InterruptedException {
         if(updatedCases) {return;}
+        logger.info("b");
         WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
+        logger.info("c");
         String pageText = driver.findElement(By.tagName("Body")).getText();
+        logger.info("d");
         driver.quit();
+        logger.info("e");
         updatedCases = scrape("totalCases",pageText);
+        logger.info("g");
     }
 
     public void updateCumulativeDeaths() throws IOException, InterruptedException {
@@ -123,6 +129,7 @@ public class ScheduledMetricUpdate {
         boolean updated = false;
         BufferedReader bufReader = new BufferedReader(new StringReader(pageText));
         while( (line=bufReader.readLine()) != null ) {
+            logger.info("f");
             if (line.contains("Data last updated on")) {
                 String update = line.substring(21);
                 //Data last updated on(21)
