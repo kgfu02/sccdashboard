@@ -61,7 +61,7 @@ public class ScheduledMetricUpdate {
     }
 
     //0 0/1 11/1 ? * *
-    //0 0/10 11/1 ? * *
+    //0 0/30 11/1 ? * *
     //* * * ? * *
     @Scheduled(cron = "0 0/30 11/1 ? * *", zone="America/Los_Angeles")
     public void update() throws IOException, JSONException, ParseException, InterruptedException {
@@ -70,7 +70,6 @@ public class ScheduledMetricUpdate {
         updateCumulativeDeaths();
         updateNewCases();
     }
-
     public void updateCumulativeCases() throws IOException, InterruptedException {
         if(updatedCases) {return;}
         logger.info("b");
@@ -110,15 +109,20 @@ public class ScheduledMetricUpdate {
     }
 
     private WebDriver getDriver(String url) throws InterruptedException {
+        logger.info("getting driver...");
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu","--window-size=1920,1200","--ignore-certificate-errors","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
-        WebDriverWait wait = new WebDriverWait(driver, 100);
+        logger.info(".get url");
         driver.get(url);
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-        Thread.sleep(1000*4);
+
+        //Thread.sleep(1000*4);
+        WebDriverWait wait = new WebDriverWait(driver, 100);
+        logger.info("waiting for tspan...");
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("tspan")));
         //System.out.println(driver.findElement(By.tagName("Body")).getText());
+        logger.info("completed!");
         return driver;
     }
 
@@ -130,9 +134,10 @@ public class ScheduledMetricUpdate {
         BufferedReader bufReader = new BufferedReader(new StringReader(pageText));
         while( (line=bufReader.readLine()) != null ) {
             logger.info("f");
-            if (line.contains("Data last updated on")) {
-                String update = line.substring(21);
+            if (line.contains("Last updated on")) {
+                String update = line.substring(16);
                 //Data last updated on(21)
+                //Last updated on(16)
                 updated = alreadyUpdated(type, update);
                 /*if (updated && type == "totalCases") {updatedCases=true;}
                 else if (updated && type == "totalDeaths") {updatedDeaths=true;}*/
