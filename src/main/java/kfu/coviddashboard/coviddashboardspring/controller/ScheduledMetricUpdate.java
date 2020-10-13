@@ -40,6 +40,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Map;
+import java.util.StringTokenizer;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 
@@ -136,6 +137,11 @@ public class ScheduledMetricUpdate {
             logger.info("f");
             if (line.contains("Last updated on")) {
                 String update = line.substring(16);
+                StringTokenizer st = new StringTokenizer(update);
+                update = st.nextToken();
+                for(int i = 0; i<2; i++) {
+                    update += " " + st.nextToken();
+                }
                 //Data last updated on(21)
                 //Last updated on(16)
                 updated = alreadyUpdated(type, update);
