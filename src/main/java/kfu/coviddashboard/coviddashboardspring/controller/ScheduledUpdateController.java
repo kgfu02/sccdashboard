@@ -110,7 +110,7 @@ public class ScheduledUpdateController {
             System.out.println(zipcode.get("Cases"));
             if(!zipcode.get("Cases").equals(null)) {
                 todaySum += zipcode.getInt("Cases");
-                map.put(zipcode.getString("zipcode").toLowerCase(), zipcode.getInt("Cases"));
+                map.put(zipcode.getString("Zipcode").toLowerCase(), zipcode.getInt("Cases"));
             }
         }
         System.out.println("///////" + map + "///////");
@@ -156,6 +156,9 @@ public class ScheduledUpdateController {
         DayComparatorTime daycomparatortime = new DayComparatorTime();
         Collections.sort(days, daycomparatortime);
         Timestamp yesterday = days.get(days.size()-1).getTimestamp(); //not necessarily yesterday, most recent entry is more accurate
+        if(days.get(days.size()-1).getcount()==null) { //if manually inputted null skip check
+            return 0;
+        }
         int i = days.size()-1;
         int sum = 0;
         while(i>=0 && days.get(i).getTimestamp().equals(yesterday)) {
