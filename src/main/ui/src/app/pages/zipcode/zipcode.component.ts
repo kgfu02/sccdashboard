@@ -255,7 +255,12 @@ export class ZipcodeComponent implements OnInit {
     for (let i = 0; i<this.zipcodes.length; i++) {
       output.push([])
       for (let j = 0; j<this.map['95129'].length; j++) {
-        output[i].push(Math.round(this.map[this.zipcodes[i]][j]/this.populations.get(this.zipcodes[i])*100000*100)/100)
+        if(this.map[this.zipcodes[i]][j]==null) {
+          output[i].push(null)
+        }
+        else {
+          output[i].push(Math.round(this.map[this.zipcodes[i]][j]/this.populations.get(this.zipcodes[i])*100000*100)/100)
+        }
       }
     }
     console.log(output)
@@ -267,7 +272,12 @@ export class ZipcodeComponent implements OnInit {
     for (let i = 0; i<this.zipcodes.length; i++) {
       output.push([])
       for (let j = 7; j<this.map['95129'].length; j++) {
-        output[i].push(Math.round((this.map[this.zipcodes[i]][j]-this.map[this.zipcodes[i]][j-7])/7*100)/100)
+        if (this.map[this.zipcodes[i]][j]==null || this.map[this.zipcodes[i]][j-7]==null) {
+          output[i].push(null)
+        }
+        else {
+          output[i].push(Math.round((this.map[this.zipcodes[i]][j]-this.map[this.zipcodes[i]][j-7])/7*100)/100)
+        }
       }
     }
     this.setData(output,'new')
