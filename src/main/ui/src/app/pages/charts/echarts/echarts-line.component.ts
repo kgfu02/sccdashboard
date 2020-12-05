@@ -23,6 +23,9 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
   screenHeight: number;
   screenWidth: number;
   gridTop: string = '17%'; // distance from top of grid to top border
+  mode: string;
+  symbolSize: number = 6;
+
   @Input()
   parentSubject: Subject<any>;
 
@@ -34,6 +37,9 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
   getScreenSize(event?) {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
+    if(this.screenWidth<1000) {
+      this.symbolSize = 2;
+    }
     console.log(this.screenHeight, this.screenWidth);
   }
 
@@ -46,6 +52,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     /*this.casesService.getDays().subscribe(
       response => {this.days = response; });*/
+
     this.casesService.invokeEvent.subscribe(val => {
       if (val === 1) {
         this.selectAll();
@@ -156,7 +163,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Campbell',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[0],
               },
               {
@@ -164,7 +171,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Cupertino',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[1],
               },
               {
@@ -172,7 +179,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Gilroy',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[2],
               },
               {
@@ -180,7 +187,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Los Altos',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[3],
               },
               {
@@ -188,7 +195,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Los Gatos',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[4],
               },
               {
@@ -196,7 +203,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Milpitas',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[5],
               },
               {
@@ -204,7 +211,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Morgan Hill',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[6],
               },
               {
@@ -212,7 +219,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Mountain View',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[7],
               },
               {
@@ -220,7 +227,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Palo Alto',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[8],
               },
               {
@@ -228,7 +235,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'San Jose',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[9],
               },
               {
@@ -236,7 +243,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Santa Clara',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[10],
               },
               {
@@ -244,7 +251,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Saratoga',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[11],
               },
               {
@@ -252,7 +259,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
                 connectNulls: true,
                 name: 'Sunnyvale',
                 type: 'line',
-                symbolSize: 6,
+                symbolSize: this.symbolSize,
                 data: cases[12],
               },
             ],
@@ -267,8 +274,10 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         this.toggleRawOn();
       else if (event == 'per') // per 100000
         this.togglePerOn();
-      else
+      else if (event == 'new')
         this.toggleNewOn();
+      else if (event == 'newPer')
+        this.toggleNewPerOn();
     });
   }
 
@@ -283,37 +292,18 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
 
   togglePerOn() {
     this.casesService.getCityCases().subscribe(cases => {
-        for (let i = 0; i<cases.length; i++) {
-          for (let j = 0; j<cases[i].length; j++) {
-            if(cases[i][j]!=null)
-              cases[i][j] = String(Math.round(+cases[i][j] / this.populations[i] * 100000*100)/100);
+        for (let i = 0; i < cases.length; i++) {
+          for (let j = 0; j < cases[i].length; j++) {
+            if (cases[i][j] != null)
+              cases[i][j] = String(Math.round(+cases[i][j] / this.populations[i] * 100000 * 100) / 100);
             else
               cases[i][j] = null;
           }
         }
-        this.setData(cases,"per");
+        this.setData(cases, "per");
       }
     );
   }
-
-  /*toggleNewOn() {
-    this.casesService.getCityCases().subscribe(cases => {
-        var newCases: String[][] = []
-        for (let i = 0; i<cases.length; i++) {
-          newCases.push([])
-          for (let j = 7; j<cases[i].length; j++) { // 7 to offset initial null values
-            if(cases[i][j]!=null && cases[i][j-1]!=null)
-              newCases[i].push(String(+cases[i][j]-(+cases[i][j-1]))) // + converts string to num?
-            else
-              newCases[i].push(null)
-          }
-          console.log(newCases)
-        }
-        this.setData(newCases,"new")
-      }
-    );
-    // set categories
-  }*/
 
   toggleNewOn() { // 7 day avg
     this.casesService.getCityCases().subscribe(cases => {
@@ -326,15 +316,38 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
             else
               newCases[i].push(null)
           }
-          console.log(newCases)
         }
         this.setData(newCases,"new")
       }
     );
     // set categories
   }
+  toggleNewPerOn() { // 7 day avg
+    this.casesService.getCityCases().subscribe(cases => {
+        var newCases: String[][] = []
+        for (let i = 0; i<cases.length; i++) {
+          newCases.push([])
+          for (let j = 7; j<cases[i].length; j++) { // 7 to offset initial null values
+            if(cases[i][j]!=null && cases[i][j-7]!=null) {
+              newCases[i].push(String(Math.round((+cases[i][j] - (+cases[i][j - 7])) / 7.0 * 100000 * 1000000000 / this.populations[i]) / 1000000000))  // + converts string to num?
+              console.log(this.populations[i])
+              console.log(+cases[i][j]-(+cases[i][j-7]))
+            }
+            else
+              newCases[i].push(null)
+            console.log(this.populations[i])
+            console.log(+cases[i][j]-(+cases[i][j-7]))
+          }
+          console.log(newCases)
+        }
+        this.setData(newCases,"newPer")
+      }
+    );
+    // set categories
+  }
 
   setData(cases: String[][], type: string) {
+    this.mode = type;
     for (let i = 0; i<cases.length; i++) {
       this.chartInstance.setOption({
         series: [
@@ -345,7 +358,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         ]
       })
     }
-    if (type == "new") {
+    if (type == "new"||type == "newPer") {
       this.chartInstance.setOption({
         xAxis: [
           {

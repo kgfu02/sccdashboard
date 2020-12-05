@@ -31,6 +31,7 @@ export class EchartsComponent implements AfterViewInit{
   currentDay: string
   latestMetricDay: string
   latestCityDay: string
+  buttonText: string = "per 100,000"; //changed to 100k if mobile
 
   constructor(private casesService: CasesService, private keyMetricService: KeyMetricService, private datePipe: DatePipe,private datePipe2: DatePipe) {
     this.getScreenSize();
@@ -46,6 +47,8 @@ export class EchartsComponent implements AfterViewInit{
     else if (this.screenHeight<600) {
       this.chartHeight = 'height: 375px';
     }
+    if (this.screenWidth < 1000)
+      this.buttonText = "per 100k"
   }
 
   ngAfterViewInit() {
@@ -100,11 +103,26 @@ export class EchartsComponent implements AfterViewInit{
     this.parentSubject.next('total');
   }
   TogglePerOn() {
+    if(this.mode=='per') {
+      this.mode='total';
+      this.parentSubject.next('total');
+      return;
+    }
     this.mode = 'per';
     this.parentSubject.next('per');
   }
   ToggleNewOn() {
+
     this.mode = 'new';
     this.parentSubject.next('new');
+  }
+  ToggleNewPerOn() {
+    if(this.mode=='newPer') {
+      this.mode='new';
+      this.parentSubject.next('new');
+      return;
+    }
+    this.mode = 'newPer';
+    this.parentSubject.next('newPer');
   }
 }

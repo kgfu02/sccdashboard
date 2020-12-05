@@ -73,13 +73,9 @@ public class ScheduledMetricUpdate {
     }
     public void updateCumulativeCases() throws IOException, InterruptedException {
         if(updatedCases) {return;}
-        logger.info("b");
         WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
-        logger.info("c");
         String pageText = driver.findElement(By.tagName("Body")).getText();
-        logger.info("d");
         driver.quit();
-        logger.info("e");
         updatedCases = scrape("totalCases",pageText);
         logger.info("g");
     }
@@ -132,22 +128,27 @@ public class ScheduledMetricUpdate {
         int counter = 0; // 1 = total deaths, 2 = new cases, 3 = new deaths, 4 = total hospitalizations, 5 = new hospitalizations, 6 = total cases
         int counterTarget = getCounterIndex(type);
         boolean updated = false;
-        BufferedReader bufReader = new BufferedReader(new StringReader(pageText));
-        while( (line=bufReader.readLine()) != null ) {
-            logger.info("f");
-            if (line.contains("Last updated on")) {
-                String update = line.substring(16);
-                StringTokenizer st = new StringTokenizer(update);
-                update = st.nextToken();
-                for(int i = 0; i<2; i++) {
-                    update += " " + st.nextToken();
+        BufferedReader bufReaderDate = new BufferedReader(new StringReader(pageText));
+        BufferedReader bufReaderUpdate = new BufferedReader(new StringReader(pageText));
+        while( (line=bufReaderDate.readLine()) != null ) {
+            if (line.contains(", 2020")||line.contains(", 2021")||line.contains(", 2022")) {
+                StringTokenizer st = new StringTokenizer(line);
+                String prev = st.nextToken();
+                String cur = st.nextToken();
+                while(!cur.contains(",") && st.hasMoreTokens()) {
+                    prev = cur;
+                    cur = st.nextToken();
                 }
+                String update = prev + " " + cur + " " + st.nextToken();
                 //Data last updated on(21)
                 //Last updated on(16)
                 updated = alreadyUpdated(type, update);
                 /*if (updated && type == "totalCases") {updatedCases=true;}
                 else if (updated && type == "totalDeaths") {updatedDeaths=true;}*/
             }
+        }
+        while( (line=bufReaderUpdate.readLine()) != null ) {
+            logger.info("f");
             if (checkNum(line)) {
                 counter++;
                 if (counter == counterTarget && !updated) { // if at target statistic and date has not been seen before

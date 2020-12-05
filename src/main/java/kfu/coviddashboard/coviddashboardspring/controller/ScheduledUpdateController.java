@@ -51,7 +51,7 @@ public class ScheduledUpdateController {
         updatedCity = updatedZipcode = false;
     }
     //city Update
-    @Scheduled(cron = "0 0/10 11/1 ? * *", zone="America/Los_Angeles")
+    @Scheduled(cron = "0 0/30 11/1 ? * *", zone="America/Los_Angeles")
     public void updateCityCases() throws IOException, JSONException, ParseException {
         if(updatedCity) {return;}
 
@@ -92,7 +92,7 @@ public class ScheduledUpdateController {
     }
     //0 0/10 11/1 ? * *
     //* * * ? * *
-    @Scheduled(cron = "0 0/10 11/1 ? * *", zone="America/Los_Angeles")
+    @Scheduled(cron = "0 0/30 11/1 ? * *", zone="America/Los_Angeles")
     public void updateZipcodeCases() throws IOException, JSONException, ParseException {
         if(updatedZipcode) {return;}
 
