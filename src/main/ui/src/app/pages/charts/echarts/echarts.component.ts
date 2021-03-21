@@ -21,6 +21,8 @@ export class EchartsComponent implements AfterViewInit{
   todaycounts = new Array();
   todaychange = new Array();
   numbers: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  populations: number[] = [42470, 60614, 55525, 30588, 30922,
+    77457, 43876, 80993, 67019, 1026658, 126209, 30886, 152323];
   screenHeight: number;
   screenWidth: number;
   chartHeight: string;
@@ -57,14 +59,23 @@ export class EchartsComponent implements AfterViewInit{
     this.keyMetricService.getKeyMetricDate("totalCases").subscribe(data => {this.latestMetricDay = ""+data });
     this.currentDay = this.datePipe.transform(new Date().toLocaleString("en-US", {timeZone: "America/Los_Angeles"}), "yyyy/MM/dd");
 
+
+
     this.casesService.getCityCases().subscribe(data => {
       for (let i = 0; i < 13; i++) {
         this.todaycounts.push(data[i][data[i].length-1]);
-        if(data[i][data[i].length-2] != null) {
-          this.todaychange.push( Number(data[i][data[i].length-1])-Number(data[i][data[i].length-2]) );
+        if(data[i][data[i].length-8] != null) {
+          this.todaychange.push( Math.round((Number(data[i][data[i].length-1])-Number(data[i][data[i].length-8]))/7.0*10 )/10);
+        }
+        if (i==1) {
+          console.log("change array")
+          console.log(Number(data[i][data[i].length-1]))
+
+          console.log(Number(data[i][data[i].length-8]))
         }
       }
-      console.log(this.todaycounts);
+
+      console.log(this.todaychange);
     });
 
     this.keyMetricService.getKeyMetric("totalCases").subscribe(cases => {

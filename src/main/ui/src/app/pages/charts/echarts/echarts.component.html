@@ -48,8 +48,8 @@
 
     <nb-card>
       <nb-card-body>
-        <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. County-level stats and city-level stats usually update at separate times.</p>
-        <p>For comparison, as of 11/16 the US had 3426 cases per 100k, California had 2626, and SCC had 1468. 1,000 cases per 100k = 1%</p>
+        <b>City/zip code level data will only update every Thursday due to changes in county reporting.</b>
+        <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day.</p>
       </nb-card-body>
     </nb-card>
   </div>
@@ -83,7 +83,7 @@
               <tr>
                 <th>City</th>
                 <th>Total Cases</th>
-                <th>New Cases</th>
+                <th>New Cases (weekly avg)</th>
               </tr>
               <tr *ngFor="let num of numbers">
                 <td class = "cityEntry">{{names[num]}}</td>

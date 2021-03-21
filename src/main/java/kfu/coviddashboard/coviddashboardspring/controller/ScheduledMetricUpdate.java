@@ -98,7 +98,7 @@ public class ScheduledMetricUpdate {
 
     private boolean checkNum(String str) { // check if str is purely a number
         try {
-            int d = Integer.parseInt(str);
+            int i = Integer.parseInt(str.replaceAll(",", ""));
         } catch (NumberFormatException nfe) {
             return false;
         }
@@ -153,7 +153,7 @@ public class ScheduledMetricUpdate {
                 counter++;
                 if (counter == counterTarget && !updated) { // if at target statistic and date has not been seen before
                     // then update
-                    keyMetricRepository.postData(type,Integer.parseInt(line),getDate());
+                    keyMetricRepository.postData(type,Integer.parseInt(line.replaceAll(",", "")),getDate());
                     ZoneId zoneId = ZoneId.of("US/Pacific");
                     ZonedDateTime zt = ZonedDateTime.now(zoneId);
                     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");

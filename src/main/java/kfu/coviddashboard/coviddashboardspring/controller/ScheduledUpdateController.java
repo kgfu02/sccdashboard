@@ -65,6 +65,9 @@ public class ScheduledUpdateController {
         //map = mapper.readValue(response.getBody(), new TypeReference<HashMap>(){});
         for (int i = 0; i < arr.length(); i++) { // insert JSON to Map
             JSONObject city = arr.getJSONObject(i).getJSONObject("attributes");
+            if(city.getString("Cases").equals("null")) {
+                continue;
+            }
             map.put(city.getString("NAME").toLowerCase(), city.getInt("Cases"));
         }
         System.out.println("///////" + map + "///////");
@@ -120,7 +123,7 @@ public class ScheduledUpdateController {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
         List<ZipcodeDay> d = dayrepository.findZipcodeDaysAll();
         //sum cases
-        int yesterdaySum = sumDays(d);
+        int yesterdaySum = sumDays(d,1);
         FileWriter myWriter = new FileWriter("log.txt", true);
         if (todaySum > yesterdaySum) {
             // change has occured in total cases, update
@@ -151,7 +154,7 @@ public class ScheduledUpdateController {
         }
     }
 
-    private int sumDays(List<? extends Entry> days) {
+    private int sumDays(List<? extends Entry> days, int type) { //type 0 = city, 1 = zipcode
         if(days.size()==0) {return 0;}
         DayComparatorTime daycomparatortime = new DayComparatorTime();
         Collections.sort(days, daycomparatortime);
@@ -159,10 +162,16 @@ public class ScheduledUpdateController {
         if(days.get(days.size()-1).getcount()==null) { //if manually inputted null skip check
             return 0;
         }
+        int maxAdded = 13;
+        if (type == 1) {
+            maxAdded = 57;
+        }
         int i = days.size()-1;
+        int numAdded = 0;
         int sum = 0;
-        while(i>=0 && days.get(i).getTimestamp().equals(yesterday)) {
+        while(i>=0 && days.get(i).getTimestamp().equals(yesterday) && numAdded < maxAdded) {
             sum += days.get(i).getcount();
+            numAdded++;
             i--;
         }
         return sum;
