@@ -21,7 +21,9 @@ public class ZipcodeController {
 
     @GetMapping("/zipcodes/cases")
     public Map<String,ArrayList<Integer>> getZipcodeCases() { // returns
+        DayComparatorTime daycomparatortime = new DayComparatorTime();
         List<ZipcodeDay> cases = dayRepository.findZipcodeDaysAll();
+        Collections.sort(cases, daycomparatortime);
         Map<String, ArrayList<Integer>> map = new TreeMap<>();
         for (int i = 0; i<cases.size(); i++) {
             if(!map.containsKey(cases.get(i).getName())) {

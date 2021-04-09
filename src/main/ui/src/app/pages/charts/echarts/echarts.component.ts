@@ -74,7 +74,9 @@ export class EchartsComponent implements AfterViewInit{
           console.log(Number(data[i][data[i].length-8]))
         }
       }
-
+      console.log("data is");
+      console.log(data);
+      console.log("change is");
       console.log(this.todaychange);
     });
 
