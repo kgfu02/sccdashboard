@@ -30,12 +30,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a7ccf91f-14ff-4ea9-9d3a-146da940fabb" name="Default Changelist" comment="added zipcode page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ZipcodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ZipcodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/about/about.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/about/about.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledUpdateController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,6 +263,14 @@
       <workItem from="1617229876511" duration="737000" />
       <workItem from="1617924317314" duration="2065000" />
       <workItem from="1617933677365" duration="1762000" />
+      <workItem from="1617935462200" duration="717000" />
+      <workItem from="1618165528247" duration="1274000" />
+      <workItem from="1619128951624" duration="15000" />
+      <workItem from="1619918783305" duration="2155000" />
+      <workItem from="1620067931596" duration="2920000" />
+      <workItem from="1620073116298" duration="151000" />
+      <workItem from="1620073281498" duration="303000" />
+      <workItem from="1620073596021" duration="916000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1596042040024</created>
@@ -321,42 +325,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="401" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1617934851547" />
-    <state x="740" y="273" key="FileChooserDialogImpl" timestamp="1609324168962">
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="273" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609324168962" />
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1617935452825">
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452825" />
-    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1617935452825">
+    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452825" />
-    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1617935452825">
+    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452825" />
-    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1617935452825">
+    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452825" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1617935452826">
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452826" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1617935452825">
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452825" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1617935452825">
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1620073102323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452825" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1617935452826">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617935452826" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620073102323" />
     <state x="880" y="141" width="1040" height="899" key="SettingsEditor" timestamp="1611606277619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -389,6 +389,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ZipcodeController.java</url>
           <line>24</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts</url>

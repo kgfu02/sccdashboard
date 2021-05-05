@@ -146,11 +146,25 @@ public class ScheduledUpdateController {
 
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
-            if(tableName.equals("dashboardtable"))
+            if(tableName.equals("dashboardtable")) {
                 dayrepository.postDataCity(entry.getKey(),entry.getValue(),dtf.format(zt));
-            else
-                dayrepository.postDataZipcode(entry.getKey(),entry.getValue(),dtf.format(zt));
+                postNull(entry.getKey(), zt,true);
+            }
+            else {
+                dayrepository.postDataZipcode(entry.getKey(), entry.getValue(), dtf.format(zt));
+                postNull(entry.getKey(), zt, false);
+            }
 
+        }
+    }
+
+    private void postNull(String name, ZonedDateTime date, boolean isCity) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        for (int i = 1; i <=6; i++) {
+            if (isCity)
+                dayrepository.postDataCity(name, null, dtf.format(date.minusDays(i)));
+            else
+                dayrepository.postDataZipcode(name, null, dtf.format(date.minusDays(i)));
         }
     }
 

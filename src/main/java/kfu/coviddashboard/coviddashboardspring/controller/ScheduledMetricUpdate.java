@@ -171,7 +171,7 @@ public class ScheduledMetricUpdate {
     private int getCounterIndex(String type) { // returns index that statistic appears
         switch(type) { // 1 = total deaths, 2 = new cases, 3 = new deaths, 4 = total hospitalizations, 5 = new hospitalizations, 6 = total cases
             case "totalDeaths": return 1;
-            case "totalCases": return 6;
+            case "totalCases": return 4;
             case "newCases": return 2;
             default: return -1;
         }
