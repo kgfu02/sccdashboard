@@ -82,7 +82,7 @@ public class ScheduledMetricUpdate {
 
     public void updateCumulativeDeaths() throws IOException, InterruptedException {
         if(updatedDeaths) {return;}
-        WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
+        WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiNTk0Y2E2ZjMtMzMyMC00OGE4LTlhN2QtYzVjMTBiYWU1MWYzIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
         String pageText = driver.findElement(By.tagName("Body")).getText();
         driver.quit();
         updatedDeaths = scrape("totalDeaths",pageText);
@@ -90,7 +90,7 @@ public class ScheduledMetricUpdate {
 
     public void updateNewCases() throws IOException, InterruptedException {
         if(updatedNewCases) {return;}
-        WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
+        WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiNTk0Y2E2ZjMtMzMyMC00OGE4LTlhN2QtYzVjMTBiYWU1MWYzIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
         String pageText = driver.findElement(By.tagName("Body")).getText();
         driver.quit();
         updatedNewCases = scrape("newCases",pageText) ;
