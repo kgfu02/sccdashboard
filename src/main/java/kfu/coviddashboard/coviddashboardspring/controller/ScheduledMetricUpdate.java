@@ -73,7 +73,7 @@ public class ScheduledMetricUpdate {
     }
     public void updateCumulativeCases() throws IOException, InterruptedException {
         if(updatedCases) {return;}
-        WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiMzdlZDFiM2QtZjM5MC00OWY3LWFhYjgtOGM1MWJiMTVmZmVhIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
+        WebDriver driver = getDriver("https://app.powerbigov.us/view?r=eyJrIjoiNTk0Y2E2ZjMtMzMyMC00OGE4LTlhN2QtYzVjMTBiYWU1MWYzIiwidCI6IjBhYzMyMDJmLWMzZTktNGY1Ni04MzBkLTAxN2QwOWQxNmIzZiJ9");
         String pageText = driver.findElement(By.tagName("Body")).getText();
         driver.quit();
         updatedCases = scrape("totalCases",pageText);

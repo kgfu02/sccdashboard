@@ -65,7 +65,9 @@ export class EchartsComponent implements AfterViewInit{
       for (let i = 0; i < 13; i++) {
         this.todaycounts.push(data[i][data[i].length-1]);
         if(data[i][data[i].length-8] != null) {
-          this.todaychange.push( Math.round((Number(data[i][data[i].length-1])-Number(data[i][data[i].length-8]))/7.0*10 )/10);
+          let avgChange: number
+          avgChange = (Number(data[i][data[i].length-1])-Number(data[i][data[i].length-8]))/7.0
+          this.todaychange.push(Math.round(avgChange/this.populations[i]* 100000 * 100) / 100);
         }
         if (i==1) {
           console.log("change array")

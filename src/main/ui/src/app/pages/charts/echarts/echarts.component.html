@@ -49,7 +49,7 @@
     <nb-card>
       <nb-card-body>
         <b>City/zip code level data will only update every Thursday due to changes in county reporting.</b>
-        <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day.</p>
+        <p>Note: Some data may be missing due to misrecording of data or data was not reported for that day. Negative changes in case counts usually mean the county removed duplicate cases.</p>
       </nb-card-body>
     </nb-card>
   </div>
@@ -83,7 +83,7 @@
               <tr>
                 <th>City</th>
                 <th>Total Cases</th>
-                <th>New Cases (weekly avg)</th>
+                <th>Daily avg/100k</th>
               </tr>
               <tr *ngFor="let num of numbers">
                 <td class = "cityEntry">{{names[num]}}</td>
