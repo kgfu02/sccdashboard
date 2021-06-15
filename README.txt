@@ -1,5 +1,6 @@
 cd to /src/main/ui
 run 'npm install' to install node_modules
+'mvn package' to create .jar file
 
 when running on AWS ubuntu ec2 server ... 
 -setup mysql
