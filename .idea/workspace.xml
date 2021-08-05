@@ -94,16 +94,16 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/src/main/ui/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Kevin\Desktop\sccdashboard" />
-      <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\java" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\src" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\src\app\services" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard\target" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\java\kfu\coviddashboard\coviddashboardspring" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Desktop\sccdashboard" />
+      <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\java" />
     </key>
   </component>
   <component name="RunManager">
@@ -277,7 +277,11 @@
       <workItem from="1621573199088" duration="721000" />
       <workItem from="1623262190489" duration="2844000" />
       <workItem from="1623720537012" duration="530000" />
-      <workItem from="1623726833095" duration="490000" />
+      <workItem from="1623726833095" duration="561000" />
+      <workItem from="1623953122001" duration="616000" />
+      <workItem from="1623955459137" duration="617000" />
+      <workItem from="1628129379271" duration="182000" />
+      <workItem from="1628129644784" duration="1054000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1596042040024</created>
@@ -328,42 +332,42 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="401" height="466" key="DebuggerActiveHint" timestamp="1617934851547">
+    <state x="615" y="392" width="533" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1628130138682">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="401" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1617934851547" />
-    <state width="1776" height="327" key="GridCell.Tab.0.bottom" timestamp="1623727024950">
+    <state x="615" y="392" width="533" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1628130138682" />
+    <state width="1776" height="353" key="GridCell.Tab.0.bottom" timestamp="1628130238859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024950" />
-    <state width="1776" height="327" key="GridCell.Tab.0.center" timestamp="1623727024950">
+    <state width="1776" height="353" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
+    <state width="1776" height="353" key="GridCell.Tab.0.center" timestamp="1628130238859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024950" />
-    <state width="1776" height="327" key="GridCell.Tab.0.left" timestamp="1623727024950">
+    <state width="1776" height="353" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
+    <state width="1776" height="353" key="GridCell.Tab.0.left" timestamp="1628130238858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024950" />
-    <state width="1776" height="327" key="GridCell.Tab.0.right" timestamp="1623727024950">
+    <state width="1776" height="353" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238858" />
+    <state width="1776" height="353" key="GridCell.Tab.0.right" timestamp="1628130238859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024950" />
-    <state width="1776" height="327" key="GridCell.Tab.1.bottom" timestamp="1623727024952">
+    <state width="1776" height="353" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
+    <state width="1776" height="353" key="GridCell.Tab.1.bottom" timestamp="1628130238859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024952" />
-    <state width="1776" height="327" key="GridCell.Tab.1.center" timestamp="1623727024950">
+    <state width="1776" height="353" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
+    <state width="1776" height="353" key="GridCell.Tab.1.center" timestamp="1628130238859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024950" />
-    <state width="1776" height="327" key="GridCell.Tab.1.left" timestamp="1623727024950">
+    <state width="1776" height="353" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
+    <state width="1776" height="353" key="GridCell.Tab.1.left" timestamp="1628130238859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024950" />
-    <state width="1776" height="327" key="GridCell.Tab.1.right" timestamp="1623727024951">
+    <state width="1776" height="353" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
+    <state width="1776" height="353" key="GridCell.Tab.1.right" timestamp="1628130238859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1776" height="327" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1623727024951" />
+    <state width="1776" height="353" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -382,6 +386,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java</url>
           <line>126</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java</url>
+          <line>153</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

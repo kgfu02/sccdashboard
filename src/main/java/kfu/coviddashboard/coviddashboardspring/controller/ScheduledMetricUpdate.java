@@ -125,7 +125,7 @@ public class ScheduledMetricUpdate {
 
     private boolean scrape(String type, String pageText) throws IOException { // posts scraped statistic of target type
         String line=null;
-        int counter = 0; // 1 = total deaths, 2 = new cases, 3 = new deaths, 4 = total hospitalizations, 5 = new hospitalizations, 6 = total cases
+        int counter = 0;
         int counterTarget = getCounterIndex(type);
         boolean updated = false;
         BufferedReader bufReaderDate = new BufferedReader(new StringReader(pageText));
@@ -169,10 +169,10 @@ public class ScheduledMetricUpdate {
     }
 
     private int getCounterIndex(String type) { // returns index that statistic appears
-        switch(type) { // 1 = total deaths, 2 = new cases, 3 = new deaths, 4 = total hospitalizations, 5 = new hospitalizations, 6 = total cases
-            case "totalDeaths": return 1;
+        switch(type) { // 5 = total deaths, 3 = new cases,  = new deaths,  = total hospitalizations,  = new hospitalizations, 4 = total cases
+            case "totalDeaths": return 5;
             case "totalCases": return 4;
-            case "newCases": return 2;
+            case "newCases": return 3;
             default: return -1;
         }
     }
