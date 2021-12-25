@@ -72,6 +72,8 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
       this.casesService.getTimestamps().subscribe(response => {
         this.casesService.getCityCases().subscribe(cases => {
           console.log(cases[0]);
+          console.log(response);
+          console.log("campbell ^")
           this.timestamps = response;
           if (this.screenWidth < 1000) {
             this.gridTop = '28%';

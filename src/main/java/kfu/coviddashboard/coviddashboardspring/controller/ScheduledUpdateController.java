@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -80,7 +81,7 @@ public class ScheduledUpdateController {
         ZoneId zoneId = ZoneId.of("US/Pacific");
         ZonedDateTime zt = ZonedDateTime.now(zoneId);
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
-        if (x.getcount() != map.get("san jose").intValue()) {
+        if (x.getcount()==null || x.getcount() != map.get("san jose").intValue()) {
             // change has occured in san jose; can be more robust by comparing total
             postData(map,"dashboardtable");
             updatedCity = true;
@@ -160,12 +161,30 @@ public class ScheduledUpdateController {
 
     private void postNull(String name, ZonedDateTime date, boolean isCity) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        for (int i = 1; i <=6; i++) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        List<? extends Entry> days;
+        if (isCity)
+            days = dayrepository.findDaysByCity(name);
+        else
+            days = dayrepository.findDaysByZipcode(name);
+        DayComparatorTime daycomparatortime = new DayComparatorTime();
+        Collections.sort(days, daycomparatortime);
+        Timestamp yesterday = days.get(days.size()-2).getTimestamp(); // most recent timestamp before currently added
+        String recentUpdate = sdf.format(yesterday);
+        int i = 1;
+        while(!dtf.format(date.minusDays(0)).equals(recentUpdate) && !dtf.format(date.minusDays(i)).equals(recentUpdate)) { // decrement timestamp until creating duplicate
             if (isCity)
                 dayrepository.postDataCity(name, null, dtf.format(date.minusDays(i)));
             else
                 dayrepository.postDataZipcode(name, null, dtf.format(date.minusDays(i)));
+            i++;
         }
+//        for (int i = 1; i <=6; i++) {
+//            if (isCity)
+//                dayrepository.postDataCity(name, null, dtf.format(date.minusDays(i)));
+//            else
+//                dayrepository.postDataZipcode(name, null, dtf.format(date.minusDays(i)));
+//        }
     }
 
     private int sumDays(List<? extends Entry> days, int type) { //type 0 = city, 1 = zipcode
