@@ -31,6 +31,220 @@
     <list default="true" id="a7ccf91f-14ff-4ea9-9d3a-146da940fabb" name="Default Changelist" comment="added zipcode page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Black.2a82f89b0a35ee7f9d45.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Black.2b8d6922c2c9957356bc.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Black.44236ad507eddcbfd986.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Black.4c3b6229efe63a13dbb4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Black.ab04c7611d94b690aee3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BlackItalic.1f37c7545ae9f63d2279.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BlackItalic.38d14dd4ff163c34e45b.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BlackItalic.3a99796b2d8592471fcf.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BlackItalic.4b7407c6740b8294d97a.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BlackItalic.ad0f284c7113fd0aaf39.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Bold.56a76a220d9c9765946d.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Bold.ab96cca26751239828b8.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Bold.ad140ff02a7091257e2b.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Bold.c7f4667b59b9bc95130e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Bold.c8bcb1cb78f9e45e2bcb.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BoldItalic.355e388740673054493c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BoldItalic.4b2cc52b05e2a960c4f1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BoldItalic.a7dce23c0dd99a4afa5c.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BoldItalic.c2e0f75da3677f645034.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-BoldItalic.d23d5bdadc495f12ef69.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Light.054fa50baa6598a7bf0c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Light.183079184d96a491f16e.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Light.37fbbbad5577a95bdf05.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Light.8e0860f3581b197e9fa4.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Light.a2b8c641546c0e5a95e2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-LightItalic.056caeabe95749fe2b97.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-LightItalic.1a9e39e536aed26b863b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-LightItalic.879d940bccbb25f6096e.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-LightItalic.c7b4e746cf8ecbf412fc.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-LightItalic.cdd1c486770034a6122e.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Medium.2741a14e49524efa6059.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Medium.2b4f394ce87ea4e7a68b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Medium.303ded6436dcf7ea7515.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Medium.76cad5ba6b8a38a77fe0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Medium.c54f2a3ee42d2a58d82f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-MediumItalic.7a49ce79b6089d4d37bf.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-MediumItalic.da059a7386fea889c55c.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-MediumItalic.eb65fb18d4446e4ac27d.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-MediumItalic.f10d1f42838680a70ac2.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-MediumItalic.fa183350bf6b814ae552.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Regular.081b11ebaca8ad30fd09.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Regular.6a561d68369fd1fb9768.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Regular.766c8926f6d9061fef24.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Regular.99b14f0da0591e0d7167.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Regular.b2a6341ae7440130ec4b.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-RegularItalic.527502d7927a41ca0b6a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-RegularItalic.8add1ba317c27e39b778.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-RegularItalic.90dbf902b8d0592e1beb.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-RegularItalic.df8e3a9b9aed94341797.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-RegularItalic.f3660f493ea5e5206484.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Thin.790ebf41d0214f5eda4e.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Thin.90d3804f0231704c15cc.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Thin.ba422f71e799f3d29cbf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Thin.c25fd8d00fd9f570545d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-Thin.cc85ce37b4256966e6f3.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-ThinItalic.11b5cc9584f2c007a229.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-ThinItalic.21e9a2e5ed0b0d8d1bb7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-ThinItalic.588293290e86dad97fcf.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-ThinItalic.64ca718f48db91b27e8c.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Roboto-ThinItalic.8a2c1a5de09de8bb2c45.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/data/news.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/alan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/camera1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/camera2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/camera3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/camera4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/cover1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/cover2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/cover3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/eva.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/jack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/kate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/kitten-corporate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/kitten-cosmic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/kitten-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/kitten-default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/lee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/nick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/square_pattern.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/square_pattern_cosmic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/team.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/markers/layers-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/markers/layers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/markers/marker-icon-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/markers/marker-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/img/markers/marker-shadow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/leaflet-countries/countries.geo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/map/world.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce-small.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce-small.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce-small.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce-small.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/fonts/tinymce.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/img/anchor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/img/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/img/object.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/img/trans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/skin.ie7.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/skins/lightgray/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100.7a962253b4221d26fc52.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100.86eb901a1b6a952ad4c6.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100.e98b7075717664dffefd.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100.f60defca0bb5c4a76c36.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100italic.09b8eba1e3ca26851758.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100italic.5d74bcc0fa9041da27ab.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100italic.7fd525ae6ef32ca51c2b.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-100italic.d8d1b8142312dc8661ca.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200.459a2b5c4d21445ecaa1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200.6272ec972e113356a7ac.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200.9154b96a4e182f3f6027.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200.ae44adae71863b09ecbc.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200italic.3487e875e62e19f8725a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200italic.3a8391359886bc872041.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200italic.cac790357edeabf496ba.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-200italic.fff0b8fbb6361809277d.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300.038973967594a7dab606.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300.21d8997134cbc12e5153.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300.3f0b3ba8796b6e7fe4bd.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300.e0e37075b606d93a9538.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300italic.2f0f55679e620d222711.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300italic.6ce1566735a3d3667090.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300italic.8d40b499402fd4189be2.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-300italic.a2ca6baedb32297ce871.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400.3002b7531096a5092d6e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400.6b1794f1847a277021b4.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400.9f16e6ee1e3327b7db3a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400.d72d248cdbced438c110.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400italic.11510e4de28d62aa3aa5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400italic.92d1911bd4c5f5ef04f7.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400italic.9e4520097381adbfe70f.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-400italic.d672d50caf856a58828c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500.6596ef88679c21505494.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500.6d4c29b8d9640e68f812.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500.81d3a72e86d04e574f0d.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500.c616c256d4843cc16357.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500italic.1ac05bd5dc0714e32eac.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500italic.3cb9a625a9283be01425.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500italic.bd17cb2d62c226e06fdb.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-500italic.fe40c45465e6e99f006b.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600.bb1d269e07b87773f1a6.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600.ca209404a4885958c612.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600.e0d97cf7ab8d3d75e34b.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600.ed2ff71bda38119fa682.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600italic.88502b7cff2e54cebf90.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600italic.b0a8187a1614891ec57b.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600italic.b7d2928a52331a7f1f07.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-600italic.e711eccd1fadfcd140a0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700.68cc7fa1f6a3184d73c2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700.734067b6563affe65beb.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700.7348a6cf42fcb58f0985.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700.d38b55777560c246992c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700italic.1f6a024d5a00aba4cee1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700italic.262dcaba2aca4a002e46.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700italic.36b975e60be97473a1e6.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-700italic.dfd1344ebc20ecda89bf.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800.006e7ec97fc14c6682a8.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800.1ae3922dda8cca45438a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800.855ca29bb887be8df4bb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800.ca084c98b9f30fcf576f.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800italic.0bc59516445e9a658021.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800italic.ba95c7ebbd3ee83362b2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800italic.c989d9d241c710a02bba.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-800italic.e75d9cbb1468c3156c59.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900.5f81c4362dcb692ed3d3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900.6eb1c493737303a66b1b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900.81e4c0811095cd6fbffa.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900.c45295dd710f6c155910.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900italic.833cc98e0a75891eebef.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900italic.90bea911b093ad5f0cf2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900italic.951a8bde845d7c17e4de.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/exo-latin-900italic.b64b7ad410228605c1a3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-brands-400.6814d0e8136d34e31362.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-brands-400.83e6c29fb363b2f0ea6c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-brands-400.da408238128b876cbda6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-brands-400.e8019d507e8cb51d169a.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-brands-400.fdf44bc43e8fa2358bbb.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-regular-400.8d220c793e2612bd131e.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-regular-400.8d9ab84bfe87a3f77112.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-regular-400.ba2a91dc95e6cfdc4b2a.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-regular-400.dad90637f797356bbc70.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-regular-400.e6c93cb47e716b579264.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-solid-900.132e9759d93e4eefd7cd.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-solid-900.2d0415fa29ea596b7a02.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-solid-900.b75b4bfe0d58faeced50.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-solid-900.de1d242d8acb26ec43c0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fa-solid-900.ea363ed4227236739179.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ionicons.19e65b89cee273a249fb.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ionicons.28df6ee7b407fd8a14b4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ionicons.2c159d0d05473040b53e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ionicons.dd4781d1acc57ba4c480.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layers-2x.4f0283c6ce28e888000e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/layers.a6137456ed160d760698.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/marker-icon.2273e3d8ad9264b7daa5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/nebular.85e45e2f83750a4184af.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/nebular.e5b059e952431846f8ab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/nebular.e7b6b47eeafe34432dca.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/nebular.ee79fa432c91db08585f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts.ae7ab52264664e9385f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/socicon.60e5857089e98edd8380.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/socicon.944f06f5f65ef84a3a36.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/socicon.9a64ef938f9e55a70a4d.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/socicon.a35b65744f557fab5424.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/square_pattern.b7c0827326f8d621b1ed.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/square_pattern_cosmic.4d0c001059a474abefa9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/src/app/pages/charts/echarts/echarts.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +290,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forge/logs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -94,16 +308,17 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/src/main/ui/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Desktop\sccdashboard\target" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard" />
+      <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Desktop\sccdashboard" />
+      <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\src" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\ui\src\app\services" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard\target" />
       <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\java\kfu\coviddashboard\coviddashboardspring" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Kevin\Desktop\sccdashboard" />
-      <recent name="C:\Users\Kevin\Desktop\sccdashboard\src\main\java" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,7 +330,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -281,7 +496,15 @@
       <workItem from="1623953122001" duration="616000" />
       <workItem from="1623955459137" duration="617000" />
       <workItem from="1628129379271" duration="182000" />
-      <workItem from="1628129644784" duration="1054000" />
+      <workItem from="1628129644784" duration="1104000" />
+      <workItem from="1628134519762" duration="6000" />
+      <workItem from="1629580675052" duration="1396000" />
+      <workItem from="1629587473062" duration="265000" />
+      <workItem from="1635903514715" duration="1026000" />
+      <workItem from="1637625468863" duration="4000" />
+      <workItem from="1648507006821" duration="398000" />
+      <workItem from="1648507497481" duration="1802000" />
+      <workItem from="1648510592403" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1596042040024</created>
@@ -301,7 +524,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -331,44 +554,6 @@
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="615" y="392" width="533" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1628130138682">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="615" y="392" width="533" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1628130138682" />
-    <state width="1776" height="353" key="GridCell.Tab.0.bottom" timestamp="1628130238859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
-    <state width="1776" height="353" key="GridCell.Tab.0.center" timestamp="1628130238859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
-    <state width="1776" height="353" key="GridCell.Tab.0.left" timestamp="1628130238858">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238858" />
-    <state width="1776" height="353" key="GridCell.Tab.0.right" timestamp="1628130238859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
-    <state width="1776" height="353" key="GridCell.Tab.1.bottom" timestamp="1628130238859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
-    <state width="1776" height="353" key="GridCell.Tab.1.center" timestamp="1628130238859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
-    <state width="1776" height="353" key="GridCell.Tab.1.left" timestamp="1628130238859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
-    <state width="1776" height="353" key="GridCell.Tab.1.right" timestamp="1628130238859">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1776" height="353" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628130238859" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -396,6 +581,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java</url>
           <line>153</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kfu/coviddashboard/coviddashboardspring/controller/ScheduledMetricUpdate.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -64,9 +64,13 @@ export class EchartsComponent implements AfterViewInit{
     this.casesService.getCityCases().subscribe(data => {
       for (let i = 0; i < 13; i++) {
         this.todaycounts.push(data[i][data[i].length-1]);
-        if(data[i][data[i].length-8] != null) {
+        // find most recent non-null entry
+        let offset = 2.0
+        while(data[i][data[i].length-offset]==null)
+          offset++
+        if(data[i][data[i].length-offset] != null) {
           let avgChange: number
-          avgChange = (Number(data[i][data[i].length-1])-Number(data[i][data[i].length-8]))/7.0
+          avgChange = (Number(data[i][data[i].length-1])-Number(data[i][data[i].length-offset]))/(offset-1)
           this.todaychange.push(Math.round(avgChange/this.populations[i]* 100000 * 100) / 100);
         }
         if (i==1) {
