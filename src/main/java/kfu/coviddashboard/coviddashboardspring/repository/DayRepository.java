@@ -32,6 +32,9 @@ public interface DayRepository extends JpaRepository<Entry,Integer> {
     @Query(value = "select * from zipcodetable", nativeQuery = true)
     List<ZipcodeDay> findZipcodeDaysAll();
 
+    @Query(value = "select * from zipcodetable where zipcode = ?1", nativeQuery = true)
+    List<ZipcodeDay> findDaysByZipcode(String zipcode);
+
     @Transactional
     @Modifying
     @Query(value = "insert into zipcodetable (zipcode, count, timestamp) values (:zipcode,:count,:time)", nativeQuery = true)
