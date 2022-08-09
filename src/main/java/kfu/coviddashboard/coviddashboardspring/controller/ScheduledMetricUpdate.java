@@ -64,7 +64,8 @@ public class ScheduledMetricUpdate {
     //0 0/1 11/1 ? * *
     //0 0/30 11/1 ? * *
     //* * * ? * *
-    @Scheduled(cron = "0 0/30 11/1 ? * *", zone="America/Los_Angeles")
+    // 0 0 15/1 ? * * new updated cron
+    @Scheduled(cron = "0 0 15/1 ? * *", zone="America/Los_Angeles")
     public void update() throws IOException, JSONException, ParseException, InterruptedException {
         logger.info("a");
         updateCumulativeCases();
@@ -131,7 +132,7 @@ public class ScheduledMetricUpdate {
         BufferedReader bufReaderDate = new BufferedReader(new StringReader(pageText));
         BufferedReader bufReaderUpdate = new BufferedReader(new StringReader(pageText));
         while( (line=bufReaderDate.readLine()) != null ) {
-            if (line.contains(", 2020")||line.contains(", 2021")||line.contains(", 2022")) {
+            if (line.contains(", 2023")||line.contains(", 2021")||line.contains(", 2022")) {
                 StringTokenizer st = new StringTokenizer(line);
                 String prev = st.nextToken();
                 String cur = st.nextToken();
@@ -170,9 +171,9 @@ public class ScheduledMetricUpdate {
 
     private int getCounterIndex(String type) { // returns index that statistic appears
         switch(type) { // 5 = total deaths, 4 = new cases,  = new deaths,  = total hospitalizations,  = new hospitalizations, 4 = total cases
-            case "totalDeaths": return 4;
-            case "totalCases": return 2;
-            case "newCases": return 3;
+            case "totalDeaths": return 5;
+            case "totalCases": return 3;
+            case "newCases": return 4;
             default: return -1;
         }
     }
