@@ -1,3 +1,4 @@
+![alt text](https://github.com/kgfu02/sccdashboard/assets/51866248/5f214049-1202-47d0-b9b0-63e50073dc1b)
 cd to /src/main/ui
 run 'npm install' to install node_modules
 'mvn package' to create .jar file
